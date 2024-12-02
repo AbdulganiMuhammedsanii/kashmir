@@ -1,2 +1,2 @@
-# kashmir
-Kashmir Initiative
+# Futures of Kashmir
+The organization works with stakeholders in Kashmir to provide eduactional reosurces to underserved communities, create innovative learning spaces, and emphasize a whole-child approach to education. Our guiding principle is the fundemental idea that all children deserve supportive learning environments and access to an education that recognizes and uplifts their own sense of identity.
