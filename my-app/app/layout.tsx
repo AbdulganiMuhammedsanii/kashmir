@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Button color="inherit" component={Link} href="/">
                   Home
                 </Button>
-                <Button color="inherit" component={Link} href="/projects/libraries">
+                <Button color="inherit" component={Link} href="/projects/partners">
                   Our Partners
                 </Button>
                 <Button color="inherit" component={Link} href="/projects/ongoing">
@@ -74,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Button fullWidth color="inherit" component={Link} href="/">
                 Home
               </Button>
-              <Button fullWidth color="inherit" component={Link} href="/projects/libraries">
+              <Button fullWidth color="inherit" component={Link} href="/projects/partners">
                 Creating Libraries
               </Button>
               <Button fullWidth color="inherit" component={Link} href="/projects/ongoing">

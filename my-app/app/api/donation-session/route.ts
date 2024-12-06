@@ -14,8 +14,10 @@ export async function POST(req: Request) {
     if (!amount || amount <= 0 || !email) {
       return new NextResponse("Invalid donation amount or email", { status: 400 });
     }
+    console.log(email);
 
     // Create a Stripe Checkout session
+    /* i needed to add payment_intent_data field where i set reciept_email to the email , which will send the confirmation email**/
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
@@ -25,16 +27,20 @@ export async function POST(req: Request) {
             product_data: {
               name: "Custom Donation",
             },
-            unit_amount: amount * 100, // Convert dollars to cents
+            unit_amount: amount * 100,
           },
           quantity: 1,
         },
       ],
       mode: "payment",
-      customer_email: email, // Send a receipt to this email
+      customer_email: email, // Still keep this for convenience at checkout
+      payment_intent_data: {
+        receipt_email: email, // This ensures a receipt is sent after successful payment
+      },
       success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/donation-success`,
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/donation-cancel`,
     });
+
 
     // Return the session URL to redirect the user
     return NextResponse.json({ url: session.url });
