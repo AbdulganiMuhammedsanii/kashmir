@@ -1,15 +1,12 @@
 "use client";
 import React from 'react';
 import {
-
   Typography,
   Container,
   Box,
   Grid,
-
   Link,
   Divider,
-
 } from '@mui/material';
 
 import "swiper/css";
