@@ -118,7 +118,7 @@ const NonProfitWebsite: React.FC = () => {
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", // Add a shadow for better visibility
             }}
           >
-            Futures of Kashmir
+            Futures of Kashmir!
           </Typography>
         </Box>
       </Box>
