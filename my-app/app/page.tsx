@@ -501,7 +501,7 @@ const NonProfitWebsite: React.FC = () => {
                 <strong>Global Impact Pitch Competition (GIPC):
                 </strong>
                 <br />
-                In 2024, Futures of Kashmir received a $1,000 award from Georgetown University's Global Impact Pitch Competition (GIPC). Led by Janeeta Shaukat (SOH '24), the project was celebrated for its initiative to create libraries and empower low-income Kashmiri students through literacy, demonstrating its potential for international impact.
+                In 2024, Futures of Kashmir received a $1,000 award from Georgetown University&apos;s Global Impact Pitch Competition (GIPC). Led by Janeeta Shaukat (SOH &apos;24), the project was celebrated for its initiative to create libraries and empower low-income Kashmiri students through literacy, demonstrating its potential for international impact.
               </Typography>
             </Grid>
           </Grid>
