@@ -1,3 +1,5 @@
+"use client"
+/* Always check to see if you are correctly using "use client"**/
 import React from "react";
 import {
   Typography,

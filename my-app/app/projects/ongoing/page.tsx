@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import {
   Typography,
@@ -9,7 +10,14 @@ import {
   Link,
   Divider,
 } from '@mui/material';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Mail, Public } from '@mui/icons-material';
+import { Swiper, SwiperSlide } from "swiper/react";
+// ... existing code ...
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
 const ElegantDivider: React.FC<{ icon?: React.ReactNode; text?: string }> = ({ icon, text }) => (
   <Divider
     textAlign="center"
@@ -31,136 +39,87 @@ const ElegantDivider: React.FC<{ icon?: React.ReactNode; text?: string }> = ({ i
     ))}
   </Divider>
 );
+
+
+
 const Projects: React.FC = () => {
   return (
     <>
-      <Box
-        id="home"
-        sx={{
-          backgroundImage: `url(/images/schoolingbackground.png)`,
-          height: '45vh', // Increase the height to make the section bigger
+      <Box sx={{ position: "relative", overflow: "hidden", height: "100vh" }}>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 5000 }}
+          loop
+          speed={2000}
+          style={{ width: "100%", height: "100vh" }}
+          breakpoints={{
+            // On mobile (small screens), show one slide at a time
+            0: {
+              slidesPerView: 1,
+            },
+            // On desktop (larger screens), show two slides side-by-side
+            1024: {
+              slidesPerView: 2,
+            },
+          }}
+        >
+          {/* Slide 1 */}
+          <SwiperSlide>
+            <img
+              src="../images/library1.png"
+              alt="Slide 1"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
 
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          color: 'white',
-          py: 10,
-          textAlign: 'center',
-          position: 'relative',
-        }}
-      >
-        {/* Overlay */}
+          {/* Slide 2 */}
+          <SwiperSlide>
+            <img
+              src="../images/library2.png"
+              alt="Slide 2"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
+
+          {/* Slide 3 */}
+          <SwiperSlide>
+            <img
+              src="../images/library3.png"
+              alt="Slide 3"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
+
+          {/* Slide 4 */}
+          <SwiperSlide>
+            <img
+              src="../images/library4.png"
+              alt="Slide 4"
+              style={{ width: "110%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
+        </Swiper>
         <Box
           sx={{
-            position: 'absolute',
+            position: "absolute",
             top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the opacity as needed
-            zIndex: 1,
+            left: 5,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(0, 0, 0, 0.1)", // Optional overlay for better text contrast
+            zIndex: 2, // Ensure text is above the carousel
+            textAlign: "center",
           }}
-        />
-        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
-          <Typography color="grey.100" variant="h2" component="h1" gutterBottom>
-            Our Work
-          </Typography>
+        >
 
+        </Box>
+      </Box >
 
-        </Container>
-      </Box>
-
-
-
-      <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
-      {/* Impact Section */}
-      <Box id="school-supply-distribution" sx={{ py: 8, backgroundColor: 'grey.100' }}>
-        <Container maxWidth="lg">
-
-          <Grid container spacing={4} sx={{ mt: 4 }}>
-            {/* Left Side: Image */}
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                }}
-              >
-                <img
-                  src="../images/library1.png" // Replace with your image path
-                  alt="School Supply Distribution"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 8,
-                  }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                }}
-              >
-                <img
-                  src="../images/library2.png" // Replace with your image path
-                  alt="School Supply Distribution"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 8,
-                  }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                }}
-              >
-                <img
-                  src="../images/library3.png" // Replace with your image path
-                  alt="School Supply Distribution"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 8,
-                  }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                }}
-              >
-                <img
-                  src="../images/library4.png" // Replace with your image path
-                  alt="School Supply Distribution"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 8,
-                  }}
-                />
-              </Box>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
 
 
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />

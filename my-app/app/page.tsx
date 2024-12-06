@@ -23,7 +23,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 // ... existing code ...
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
+import Script from 'next/script';
 import { Mail, Public } from '@mui/icons-material';
 
 
@@ -123,6 +123,40 @@ const NonProfitWebsite: React.FC = () => {
       </Box>
 
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
+      {/* Featured Instagram Post Section */}
+      <Box id="mission" sx={{ py: 8, backgroundColor: 'grey.100' }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={12} md={6} color="secondary">
+              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
+                Check Out Our Instagram
+              </Typography>
+              <Typography variant="body1" color="secondary" paragraph>
+                Stay connected with our journey and witness the transformative power of innovation! Be the first to explore our upcoming projects, crafted with a vision to inspire and make a difference              </Typography>
+
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <blockquote
+                className="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/futuresofkashmir/"
+                data-instgrm-version="14"
+                style={{
+                  margin: "1rem auto",
+                  maxWidth: "500px",
+                  width: "100%",
+                }}
+              ></blockquote>
+              <Script
+                src="//www.instagram.com/embed.js"
+                strategy="lazyOnload"
+                onLoad={() => {
+                  // Optional: If you need to handle something after the script loads
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
       {/* Mission Section */}
       <Box id="mission" sx={{ py: 8, backgroundColor: 'grey.100' }}>
         <Container maxWidth="lg">
