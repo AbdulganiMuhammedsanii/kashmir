@@ -1,3 +1,4 @@
+/* always use Image Prop**/
 "use client"
 import React from "react";
 import {

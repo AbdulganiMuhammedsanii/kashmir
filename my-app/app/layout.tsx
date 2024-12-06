@@ -4,6 +4,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, Box } from "@m
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Image from 'next/image';
 
 const theme = createTheme({
   palette: {
@@ -29,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <AppBar position="static">
             <Toolbar>
               <Typography component={Link} href="/" variant="h6" sx={{ flexGrow: 1 }}>
-                <img src="/images/logo.png" alt="Logo" style={{ width: "15%", height: "auto" }} />
+                <Image width={400} height={400} src="/images/logo.png" alt="Logo" style={{ width: "15%", height: "auto" }} />
               </Typography>
               {/* Hamburger Menu for Mobile */}
               <IconButton
