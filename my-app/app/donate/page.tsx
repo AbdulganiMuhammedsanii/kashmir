@@ -4,6 +4,8 @@ import {
   Box, Typography, TextField, Button, Container, Grid, Divider, Link,
 } from "@mui/material";
 import axios from "axios";
+import Image from 'next/image';
+
 import { Mail, Public } from '@mui/icons-material';
 const DonatePage: React.FC = () => {
   const [amount, setAmount] = useState<string>(""); // Use a string to start with an empty input
@@ -66,9 +68,11 @@ const DonatePage: React.FC = () => {
                   alignItems: "center",
                 }}
               >
-                <img
+                <Image
                   src="/images/landingpagemission.jpg" // Replace with your image path
                   alt="Support Our Cause"
+                  width={400}
+                  height={400}
                   style={{
                     width: "100%", // Makes the image take the full width of the container
                     height: "auto", // Maintains the aspect ratio

@@ -12,6 +12,8 @@ import {
   Divider
 } from '@mui/material';
 import { Mail, Public } from '@mui/icons-material';
+import Image from 'next/image';
+
 
 
 const ElegantDivider: React.FC<{ icon?: React.ReactNode; text?: string }> = ({ icon, text }) => (
@@ -96,9 +98,11 @@ const Projects: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <img
-                  src="../images/mirirosh.png" // Replace with your image path
+                <Image
+                  src="/images/mirirosh.png" // Replace with your image path
                   alt="School Supply Distribution"
+                  width={400}
+                  height={400}
                   style={{
                     width: '100%',
                     height: '100%',
@@ -121,9 +125,11 @@ const Projects: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <img
-                  src="../images/karimari.png" // Replace with your image path
+                <Image
+                  src="/images/karimari.png" // Replace with your image path
                   alt="School Supply Distribution"
+                  width={400}
+                  height={400}
                   style={{
                     width: '100%',
                     height: '100%',
@@ -146,9 +152,11 @@ const Projects: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <img
-                  src="../images/khaigala.png" // Replace with your image path
+                <Image
+                  src="/images/khaigala.png" // Replace with your image path
                   alt="School Supply Distribution"
+                  width={400}
+                  height={400}
                   style={{
                     width: '100%',
                     height: '100%',
@@ -171,9 +179,11 @@ const Projects: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <img
-                  src="../images/kuyain.png" // Replace with your image path
+                <Image
+                  src="/images/kuyain.png" // Replace with your image path
                   alt="School Supply Distribution"
+                  width={400}
+                  height={400}
                   style={{
                     width: '100%',
                     height: '100%',
@@ -196,9 +206,11 @@ const Projects: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <img
-                  src="../images/motareen.png" // Replace with your image path
+                <Image
+                  src="/images/motareen.png" // Replace with your image path
                   alt="Motareen School"
+                  width={400}
+                  height={400}
                   style={{
                     width: '100%',
                     height: '100%',
@@ -255,9 +267,11 @@ const Projects: React.FC = () => {
                   alignItems: 'center',
                 }}
               >
-                <img
-                  src="../images/motareen.png" // Replace with your image path
+                <Image
+                  src="/images/motareen.png" // Replace with your image path
                   alt="Motareen School"
+                  width={400}
+                  height={400}
                   style={{
                     width: '100%',
                     height: 'auto', // Maintains aspect ratio

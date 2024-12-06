@@ -15,6 +15,8 @@ import { Mail, Public } from '@mui/icons-material';
 import { Swiper, SwiperSlide } from "swiper/react";
 // ... existing code ...
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from 'next/image';
+
 
 const ElegantDivider: React.FC<{ icon?: React.ReactNode; text?: string }> = ({ icon, text }) => (
   <Divider
@@ -65,36 +67,44 @@ const Projects: React.FC = () => {
         >
           {/* Slide 1 */}
           <SwiperSlide>
-            <img
-              src="../images/library1.png"
+            <Image
+              src="/images/library1.png"
               alt="Slide 1"
+              width={400}
+              height={400}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
 
           {/* Slide 2 */}
           <SwiperSlide>
-            <img
-              src="../images/library2.png"
+            <Image
+              src="/images/library2.png"
               alt="Slide 2"
+              width={400}
+              height={400}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
 
           {/* Slide 3 */}
           <SwiperSlide>
-            <img
-              src="../images/library3.png"
+            <Image
+              src="/images/library3.png"
               alt="Slide 3"
+              width={400}
+              height={400}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
 
           {/* Slide 4 */}
           <SwiperSlide>
-            <img
-              src="../images/library4.png"
+            <Image
+              src="/images/library4.png"
               alt="Slide 4"
+              width={400}
+              height={400}
               style={{ width: "110%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
@@ -138,9 +148,11 @@ const Projects: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <img
-                  src="../images/supply.png" // Replace with your image path
+                <Image
+                  src="/images/supply.png" // Replace with your image path
                   alt="School Supply Distribution"
+                  width={400}
+                  height={400}
                   style={{
                     width: '100%',
                     height: '100%',
@@ -201,10 +213,13 @@ const Projects: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <img
-                  src="../images/readaloud2.png" // Replace with your image path
+                <Image
+                  src="/images/readaloud2.png" // Replace with your image path
                   alt="School Supply Distribution"
+                  width={400}
+                  height={400}
                   style={{
+
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',

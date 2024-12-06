@@ -17,6 +17,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Script from 'next/script';
 import { Mail, Public } from '@mui/icons-material';
+import Image from 'next/image';
 
 
 
@@ -57,30 +58,38 @@ const NonProfitWebsite: React.FC = () => {
           style={{ width: "100%", height: "100vh" }}
         >
           <SwiperSlide>
-            <img
+            <Image
               src="/images/motareen.png"
               alt="Slide 1"
+              width={400}
+              height={400}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
           <SwiperSlide>
-            <img
+            <Image
               src="/images/mirirosh.png"
               alt="Slide 2"
+              width={400}
+              height={400}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
           <SwiperSlide>
-            <img
+            <Image
               src="/images/karimari.png"
               alt="Slide 3"
+              width={400}
+              height={400}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
           <SwiperSlide>
-            <img
+            <Image
               src="/images/khaigala.png"
               alt="Slide 4"
+              width={400}
+              height={400}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
@@ -154,8 +163,10 @@ const NonProfitWebsite: React.FC = () => {
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
-              <img
-                src="images/landingpagemission.jpg"
+              <Image
+                width={400}
+                height={400}
+                src="/images/landingpagemission.jpg"
                 alt="Our Mission"
                 style={{ width: '100%', borderRadius: 8 }}
               />
@@ -199,9 +210,11 @@ const NonProfitWebsite: React.FC = () => {
                     mb: 2, // Add margin below the image
                   }}
                 >
-                  <img
-                    src="images/janeeta.png"
+                  <Image
+                    src="/images/janeeta.png"
                     alt="Janeeta Shaukat"
+                    width={400}
+                    height={400}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -229,9 +242,11 @@ const NonProfitWebsite: React.FC = () => {
                     mb: 2,
                   }}
                 >
-                  <img
-                    src="images/umer.png"
+                  <Image
+                    src="/images/umer.png"
                     alt="Umer"
+                    width={400}
+                    height={400}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -259,9 +274,11 @@ const NonProfitWebsite: React.FC = () => {
                     mb: 2,
                   }}
                 >
-                  <img
-                    src="images/nile.png"
+                  <Image
+                    src="/images/nile.png"
                     alt="Nile"
+                    width={400}
+                    height={400}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -290,9 +307,11 @@ const NonProfitWebsite: React.FC = () => {
                     mb: 2,
                   }}
                 >
-                  <img
-                    src="images/meer.png"
+                  <Image
+                    src="/images/meer.png"
                     alt="Meer"
+                    width={400}
+                    height={400}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -320,9 +339,11 @@ const NonProfitWebsite: React.FC = () => {
                     mb: 2,
                   }}
                 >
-                  <img
-                    src="images/ikram.png"
+                  <Image
+                    src="/images/ikram.png"
                     alt="Ikram"
+                    width={400}
+                    height={400}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -350,9 +371,11 @@ const NonProfitWebsite: React.FC = () => {
                     mb: 2,
                   }}
                 >
-                  <img
-                    src="images/aminah.png"
+                  <Image
+                    src="/images/aminah.png"
                     alt="Aminah"
+                    width={400}
+                    height={400}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -379,9 +402,11 @@ const NonProfitWebsite: React.FC = () => {
                     mb: 2,
                   }}
                 >
-                  <img
-                    src="images/sarah.png"
+                  <Image
+                    src="/images/sarah.png"
                     alt="Sarah"
+                    width={400}
+                    height={400}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -424,9 +449,11 @@ const NonProfitWebsite: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <img
-                  src="images/school.png" // Replace with your image path
+                <Image
+                  src="/images/school.png" // Replace with your image path
                   alt="Miri Roshni School Library Project"
+                  width={400}
+                  height={400}
                   style={{
                     width: '100%',
                     height: '100%',
