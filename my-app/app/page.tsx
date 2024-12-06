@@ -1,22 +1,17 @@
 "use client";
 import React from 'react';
 import {
-  AppBar,
-  Toolbar,
+
   Typography,
-  Button,
   Container,
   Box,
   Grid,
-  Paper,
-  TextField,
+
   Link,
   Divider,
-  Menu, MenuItem,
-  keyframes
+
 } from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import landingPageImage from '../public/images/landingpagemission.jpg';
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
