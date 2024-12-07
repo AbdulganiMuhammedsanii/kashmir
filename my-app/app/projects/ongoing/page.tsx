@@ -46,7 +46,13 @@ const ElegantDivider: React.FC<{ icon?: React.ReactNode; text?: string }> = ({ i
 const Projects: React.FC = () => {
   return (
     <>
-      <Box sx={{ position: "relative", overflow: "hidden", height: "100vh" }}>
+      <Box sx={{
+        position: "relative",
+        overflow: "hidden",
+        width: '100%',
+        // Square and smaller on mobile, full screen on desktop
+        height: { xs: '100vw', sm: '100vh' }
+      }}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
@@ -54,62 +60,33 @@ const Projects: React.FC = () => {
           autoplay={{ delay: 5000 }}
           loop
           speed={2000}
-          style={{ width: "100%", height: "100vh" }}
           breakpoints={{
-            // On mobile (small screens), show one slide at a time
+            // Mobile vertical slider
             0: {
               slidesPerView: 1,
+              direction: 'vertical',
             },
-            // On desktop (larger screens), show two slides side-by-side
-            1024: {
+            // Desktop horizontal slider
+            600: {
               slidesPerView: 2,
+              direction: 'horizontal',
             },
           }}
+          style={{ width: "100%", height: "100%" }}
         >
-          {/* Slide 1 */}
-          <SwiperSlide>
-            <Image
-              src="/images/library1.png"
-              alt="Slide 1"
-              width={400}
-              height={400}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </SwiperSlide>
-
-          {/* Slide 2 */}
-          <SwiperSlide>
-            <Image
-              src="/images/library2.png"
-              alt="Slide 2"
-              width={400}
-              height={400}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </SwiperSlide>
-
-          {/* Slide 3 */}
-          <SwiperSlide>
-            <Image
-              src="/images/library3.png"
-              alt="Slide 3"
-              width={400}
-              height={400}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </SwiperSlide>
-
-          {/* Slide 4 */}
-          <SwiperSlide>
-            <Image
-              src="/images/library4.png"
-              alt="Slide 4"
-              width={400}
-              height={400}
-              style={{ width: "110%", height: "100%", objectFit: "cover" }}
-            />
-          </SwiperSlide>
+          {['/images/library1.png', '/images/library2.png', '/images/library3.png', '/images/library4.png'].map((src, i) => (
+            <SwiperSlide key={i}>
+              <Image
+                src={src}
+                alt={`Slide ${i + 1}`}
+                width={400}
+                height={400}
+                className="responsive-image"
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
+
         <Box
           sx={{
             position: "absolute",
@@ -120,14 +97,39 @@ const Projects: React.FC = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(0, 0, 0, 0.1)", // Optional overlay for better text contrast
-            zIndex: 2, // Ensure text is above the carousel
+            backgroundColor: "rgba(0, 0, 0, 0.1)",
+            zIndex: 2,
             textAlign: "center",
           }}
         >
-
+          {/* Overlay Content */}
         </Box>
-      </Box >
+
+        <style jsx global>{`
+          .responsive-image {
+            width: 100% !important;
+            display: block;
+            object-position: center;
+          }
+
+          @media (max-width: 600px) {
+            /* On mobile: square frame, show full image, no cropping */
+            .responsive-image {
+              height: auto !important;
+              object-fit: contain !important;
+            }
+          }
+
+          @media (min-width: 600px) {
+            /* On desktop: fill entire screen height, cover, no misalignment */
+            .responsive-image {
+              height: 100% !important;
+              object-fit: cover !important;
+            }
+          }
+        `}</style>
+      </Box>
+
 
 
 
@@ -253,7 +255,8 @@ const Projects: React.FC = () => {
               <Typography variant="body2">
                 <Mail fontSize="small" /> futuresofkashmir@gmail.com
               </Typography>
-              <Typography variant="body2">123 Charity Street, Kindness City, Country</Typography>
+              <Typography variant="body2">3700 O St NW, Washington, DC 20057
+              </Typography>
             </Grid>
             <Grid item xs={12} md={4}>
               <Typography variant="h6" gutterBottom>

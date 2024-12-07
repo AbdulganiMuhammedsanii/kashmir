@@ -158,14 +158,16 @@ const NonProfitWebsite: React.FC = () => {
           </Grid>
         </Container>
       </Box>
+      <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
+
       {/* Mission Section */}
       <Box id="mission" sx={{ py: 8, backgroundColor: 'grey.100' }}>
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
               <Image
-                width={400}
-                height={400}
+                width={450}
+                height={350}
                 src="/images/landingpagemission.jpg"
                 alt="Our Mission"
                 style={{ width: '100%', borderRadius: 8 }}
@@ -524,7 +526,8 @@ const NonProfitWebsite: React.FC = () => {
               <Typography variant="body2">
                 <Mail fontSize="small" /> futuresofkashmir@gmail.com
               </Typography>
-              <Typography variant="body2">123 Charity Street, Kindness City, Country</Typography>
+              <Typography variant="body2">3700 O St NW, Washington, DC 20057
+              </Typography>
             </Grid>
             <Grid item xs={12} md={4}>
               <Typography variant="h6" gutterBottom>

@@ -296,7 +296,8 @@ const Projects: React.FC = () => {
               <Typography variant="body2">
                 <Mail fontSize="small" /> futuresofkashmir@gmail.com
               </Typography>
-              <Typography variant="body2">123 Charity Street, Kindness City, Country</Typography>
+              <Typography variant="body2">3700 O St NW, Washington, DC 20057
+              </Typography>
             </Grid>
             <Grid item xs={12} md={4}>
               <Typography variant="h6" gutterBottom>

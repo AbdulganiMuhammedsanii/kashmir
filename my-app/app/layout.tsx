@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <AppBar position="static">
             <Toolbar>
               <Typography component={Link} href="/" variant="h6" sx={{ flexGrow: 1 }}>
-                <Image width={400} height={400} src="/images/logo.png" alt="Logo" style={{ width: "15%", height: "auto" }} />
+                <Image width={500} height={500} src="/images/logo.png" alt="Logo" style={{ width: "20%", height: "auto" }} />
               </Typography>
               {/* Hamburger Menu for Mobile */}
               <IconButton
