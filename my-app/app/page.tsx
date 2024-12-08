@@ -50,7 +50,6 @@ const NonProfitWebsite: React.FC = () => {
       <Box sx={{ position: "relative", overflow: "hidden", height: "100vh" }}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 2500 }}
           loop

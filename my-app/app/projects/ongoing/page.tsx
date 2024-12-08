@@ -55,7 +55,6 @@ const Projects: React.FC = () => {
       }}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000 }}
           loop

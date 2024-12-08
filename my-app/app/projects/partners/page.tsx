@@ -86,8 +86,11 @@ const Projects: React.FC = () => {
 
           <Grid container spacing={4} sx={{ mt: 4 }}>
             {/* Left Side: Image */}
-
-
+            <Grid item xs={12} md={12} justifyContent="center" alignItems="center">
+              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
+                Miri Roshni School
+              </Typography>
+            </Grid>
             <Grid item xs={12} md={6}>
               <Box
                 sx={{
@@ -110,11 +113,35 @@ const Projects: React.FC = () => {
                 />
               </Box>
             </Grid>
+
             <Grid item xs={12} md={6}>
+              <Box
+                sx={{
+                  height: '100%',
+                  overflow: 'hidden',
+                  borderRadius: 2,
+                }}
+              >
+                <Image
+                  src="/images/library3.png" // Replace with your image path
+                  alt="School Supply Distribution"
+                  width={200}
+                  height={200}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: 8,
+                  }}
+                />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={12}>
               <Typography variant="h3" color="secondary" component="h2" gutterBottom>
-                Miri Roshni School
+                Kali Nari School
               </Typography>
             </Grid>
+
             <Grid item xs={12} md={6}>
               <Box
                 sx={{
@@ -138,11 +165,6 @@ const Projects: React.FC = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
-                Kali Nari School
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={6}>
               <Box
                 sx={{
                   height: '100%',
@@ -151,7 +173,7 @@ const Projects: React.FC = () => {
                 }}
               >
                 <Image
-                  src="/images/khaigala.png" // Replace with your image path
+                  src="/images/kalinari.png" // Replace with your image path
                   alt="School Supply Distribution"
                   width={400}
                   height={400}
@@ -164,36 +186,9 @@ const Projects: React.FC = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={12}>
               <Typography variant="h3" color="secondary" component="h2" gutterBottom>
-                Khaigala School
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                }}
-              >
-                <Image
-                  src="/images/kuyain.png" // Replace with your image path
-                  alt="School Supply Distribution"
-                  width={400}
-                  height={400}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 8,
-                  }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
-                Kuyain School
+                Motareen School
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -219,9 +214,95 @@ const Projects: React.FC = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
+              <Image
+                src="/images/motareeninfo.png" // Replace with your image path
+                alt="Motareen School"
+                width={400}
+                height={400}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: 8,
+                }}
+              />
+            </Grid>
+
+            <Grid item xs={12} md={12}>
               <Typography variant="h3" color="secondary" component="h2" gutterBottom>
-                Motareen School
+                Kuyain School
               </Typography>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box
+                sx={{
+                  height: '100%',
+                  overflow: 'hidden',
+                  borderRadius: 2,
+                }}
+              >
+                <Image
+                  src="/images/kuyain.png" // Replace with your image path
+                  alt="School Supply Distribution"
+                  width={400}
+                  height={400}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: 8,
+                  }}
+                />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box
+                sx={{
+                  height: '100%',
+                  overflow: 'hidden',
+                  borderRadius: 2,
+                }}
+              >
+                <Image
+                  src="/images/kuyaininfo.png" // Replace with your image path
+                  alt="School Supply Distribution"
+                  width={400}
+                  height={400}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: 8,
+                  }}
+                />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
+                Khaigala School
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box
+                sx={{
+                  height: '100%',
+                  overflow: 'hidden',
+                  borderRadius: 2,
+                }}
+              >
+                <Image
+                  src="/images/khaigala.png" // Replace with your image path
+                  alt="School Supply Distribution"
+                  width={400}
+                  height={400}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: 8,
+                  }}
+                />
+              </Box>
             </Grid>
           </Grid>
         </Container>

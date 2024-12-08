@@ -8,6 +8,10 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+.swiper-button-next,
+.swiper-button-prev {
+  visibility: hidden;
+}
 
 @font-face {
   font-family: 'ITC Galliard Roman';
