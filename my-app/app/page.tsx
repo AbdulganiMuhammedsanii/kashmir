@@ -289,11 +289,10 @@ const NonProfitWebsite: React.FC = () => {
                   />
                 </Box>
                 <Typography color="secondary" variant="h6" component="h3">
-                  Nile, Program Coordinator
+                  Nile Adhami
                 </Typography>
                 <Typography color="secondary" variant="body1">
-                  Nile is dedicated to ensuring the smooth operation of our community outreach programs.
-                </Typography>
+                  Nile is a Junior in the Georgetown College studying Government with a minor in Justice & Peace Studies.                </Typography>
               </Box>
             </Grid>
 
@@ -322,10 +321,10 @@ const NonProfitWebsite: React.FC = () => {
                   />
                 </Box>
                 <Typography color="secondary" variant="h6" component="h3">
-                  Meer, Volunteer Coordinator
+                  Meer Malik
                 </Typography>
                 <Typography color="secondary" variant="body1">
-                  Meer works closely with our volunteers to ensure every event is a success.
+                  Meer is a Senior the Georgetown University School of Foreign Service studying International Politics.
                 </Typography>
               </Box>
             </Grid>
@@ -354,10 +353,10 @@ const NonProfitWebsite: React.FC = () => {
                   />
                 </Box>
                 <Typography color="secondary" variant="h6" component="h3">
-                  Ikram, Logistics Manager
+                  Ikram Muhammedsani
                 </Typography>
                 <Typography color="secondary" variant="body1">
-                  Ikram ensures that all supplies and resources are delivered efficiently.
+                  Ikram is a Junior in the Georgetown University School of Health majoring in Human Science with a minor in Islam & Christian Understanding.
                 </Typography>
               </Box>
             </Grid>
@@ -386,11 +385,10 @@ const NonProfitWebsite: React.FC = () => {
                   />
                 </Box>
                 <Typography color="secondary" variant="h6" component="h3">
-                  Aminah, Fundraising Lead
+                  Aminah Yusuf
                 </Typography>
                 <Typography color="secondary" variant="body1">
-                  Aminah leads our fundraising initiatives to bring our projects to life.
-                </Typography>
+                  Aminah is a Senior at Georgetown School of Foreign Service studying International Political Economy with a minor in Islam & Christian Understanding.                </Typography>
               </Box>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -417,10 +415,10 @@ const NonProfitWebsite: React.FC = () => {
                   />
                 </Box>
                 <Typography color="secondary" variant="h6" component="h3">
-                  Aminah, Fundraising Lead
+                  Sarah Ali
                 </Typography>
                 <Typography color="secondary" variant="body1">
-                  Aminah leads our fundraising initiatives to bring our projects to life.
+                  Sarah is a Sophmore in the Georgetown College studying Computer Science.
                 </Typography>
               </Box>
             </Grid>
