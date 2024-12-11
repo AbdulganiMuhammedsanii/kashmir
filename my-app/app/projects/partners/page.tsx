@@ -366,48 +366,7 @@ const Projects: React.FC = () => {
       </Box>
 
 
-      {/* Footer */}
-      <Box sx={{ py: 4, backgroundColor: 'primary.main', color: 'white' }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" gutterBottom>
-                Futures of Kashmir
-              </Typography>
-              <Typography variant="body2">
-                <Mail fontSize="small" /> futuresofkashmir@gmail.com
-              </Typography>
-              <Typography variant="body2">3700 O St NW, Washington, DC 20057
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" gutterBottom>
-                Quick Links
-              </Typography>
-              <Link href="#about" color="primary" underline="hover" display="block">
-                About Us
-              </Link>
-              <Link variant="body1" href="#mission" color="inherit" underline="hover" display="block">
-                Our Mission
-              </Link>
-              <Link variant="body1" href="#impact" color="inherit" underline="hover" display="block">
-                Impact
-              </Link>
 
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" gutterBottom>
-                Follow Us
-              </Typography>
-              {/* Social media icons would go here */}
-            </Grid>
-          </Grid>
-          {/*<Typography variant="body2" align="center" sx={{ mt: 4 }}>
-            © {new Date().getFullYear()} Non-Profit Name. All Rights Reserved.
-          </Typography>*/}
-        </Container>
-
-      </Box>
 
     </>);
 };

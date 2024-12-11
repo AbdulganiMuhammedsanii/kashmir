@@ -124,7 +124,7 @@ const NonProfitWebsite: React.FC = () => {
 
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
       {/* Featured Instagram Post Section */}
-      <Box id="mission" sx={{ py: 8, backgroundColor: 'grey.100' }}>
+      <Box id="instagram" sx={{ py: 8, backgroundColor: 'grey.100' }}>
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6} color="secondary">
@@ -180,7 +180,7 @@ const NonProfitWebsite: React.FC = () => {
                 Futures of Kashmir is an organization dedicated to the cause of advancing educational equity and access to literacy in Azad Kashmir.
               </Typography>
               <Typography variant="body1" color="secondary" paragraph>
-                The organization works with stakeholders in Kashmir to provide eduactional reosurces to underserved communities, create innovative learning spaces, and emphasize a whole-child approach to education. Our guiding principle is the fundemental idea that all children deserve supportive learning environments and access to an education that recognizes and uplifts their own sense of identity.
+                The organization works with stakeholders in Kashmir to provide educational reosurces to underserved communities, create innovative learning spaces, and emphasize a whole-child approach to education. Our guiding principle is the fundemental idea that all children deserve supportive learning environments and access to an education that recognizes and uplifts their own sense of identity.
               </Typography>
             </Grid>
           </Grid>
@@ -512,46 +512,7 @@ const NonProfitWebsite: React.FC = () => {
       {/* Contact Section */}
 
 
-      {/* Footer */}
-      <Box sx={{ py: 4, backgroundColor: 'primary.main', color: 'white' }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" gutterBottom>
-                Futures of Kashmir
-              </Typography>
-              <Typography variant="body2">
-                <Mail fontSize="small" /> futuresofkashmir@gmail.com
-              </Typography>
-              <Typography variant="body2">3700 O St NW, Washington, DC 20057
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" gutterBottom>
-                Quick Links
-              </Typography>
-              <Link href="#about" color="primary" underline="hover" display="block">
-                About Us
-              </Link>
-              <Link variant="body1" href="#mission" color="inherit" underline="hover" display="block">
-                Our Mission
-              </Link>
-              <Link variant="body1" href="#impact" color="inherit" underline="hover" display="block">
-                Impact
-              </Link>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" gutterBottom>
-                Follow Us
-              </Typography>
-              {/* Social media icons would go here */}
-            </Grid>
-          </Grid>
-          {/*<Typography variant="body2" align="center" sx={{ mt: 4 }}>
-            © {new Date().getFullYear()} Non-Profit Name. All Rights Reserved.
-          </Typography>*/}
-        </Container>
-      </Box>
+
     </>);
 };
 
