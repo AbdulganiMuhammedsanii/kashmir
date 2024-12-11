@@ -5,7 +5,6 @@ import {
   Container,
   Box,
   Grid,
-  Link,
   Divider,
 } from '@mui/material';
 
@@ -16,7 +15,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // ... existing code ...
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Script from 'next/script';
-import { Mail, Public } from '@mui/icons-material';
+import { Public } from '@mui/icons-material';
 import Image from 'next/image';
 
 
