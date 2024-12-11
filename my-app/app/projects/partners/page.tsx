@@ -6,10 +6,9 @@ import {
   Container,
   Box,
   Grid,
-  Link,
   Divider
 } from '@mui/material';
-import { Mail, Public } from '@mui/icons-material';
+import { Public } from '@mui/icons-material';
 import Image from 'next/image';
 
 

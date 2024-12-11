@@ -6,13 +6,12 @@ import {
   Container,
   Box,
   Grid,
-  Link,
   Divider,
 } from '@mui/material';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Mail, Public } from '@mui/icons-material';
+import { Public } from '@mui/icons-material';
 import { Swiper, SwiperSlide } from "swiper/react";
 // ... existing code ...
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
