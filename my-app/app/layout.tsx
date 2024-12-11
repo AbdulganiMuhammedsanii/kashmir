@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Image from 'next/image';
 
+import Footer from "./components/footer";
+
 const theme = createTheme({
   palette: {
     primary: { main: "#FFA500" },
@@ -89,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           {/* Page Content */}
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
