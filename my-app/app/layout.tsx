@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, Box } from "@mui/material";
+import { AppBar, Menu, MenuItem, Toolbar, Typography, Button, IconButton, Drawer, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -19,11 +19,16 @@ const theme = createTheme({
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-  const toggleDrawer = (open: boolean) => () => {
-    setDrawerOpen(open);
-  };
+  const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget)
+  }
+
+  const handleMenuClose = () => {
+    setAnchorEl(null)
+  }
+
 
   return (
     <html lang="en">
@@ -38,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <IconButton
                 color="inherit"
                 edge="start"
-                onClick={toggleDrawer(true)}
+                onClick={handleMenuOpen}
                 sx={{ display: { xs: "block", md: "none" } }} // Visible only on mobile
               >
                 <MenuIcon />
@@ -62,32 +67,59 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </AppBar>
 
           {/* Drawer for Mobile */}
-          <Drawer
-            anchor="left"
-            open={drawerOpen}
-            onClose={toggleDrawer(false)}
-            sx={{ display: { xs: "block", md: "none" } }} // Visible only on mobile
+          <Menu
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={handleMenuClose}
+            sx={{
+              display: { xs: "block", md: "none" },
+              boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)", // Soft shadow
+              borderRadius: "8px", // Rounded corners
+              padding: "10px", // Padding around the menu
+            }}
           >
-            <Box
-              sx={{ width: 250, p: 2 }}
-              role="presentation"
-              onClick={toggleDrawer(false)}
-              onKeyDown={toggleDrawer(false)}
-            >
-              <Button fullWidth color="inherit" component={Link} href="/">
-                Home
-              </Button>
-              <Button fullWidth color="inherit" component={Link} href="/projects/partners">
-                Creating Libraries
-              </Button>
-              <Button fullWidth color="inherit" component={Link} href="/projects/ongoing">
-                On-Going Projects
-              </Button>
-              <Button fullWidth color="inherit" component={Link} href="/donate">
-                Donate
-              </Button>
-            </Box>
-          </Drawer>
+
+            <MenuItem onClick={handleMenuClose} color="inherit" component={Link} href="/" sx={{
+              fontFamily: "Cursive, sans-serif",
+              fontSize: "1.1rem",
+              color: "#333",
+              '&:hover': {
+                backgroundColor: "#e0e0e0",
+              },
+            }}>
+              Home
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose} color="inherit" component={Link} href="/projects/partners" sx={{
+              fontFamily: "Cursive, sans-serif",
+              fontSize: "1.1rem",
+              color: "#333",
+              '&:hover': {
+                backgroundColor: "#e0e0e0",
+              },
+            }}>
+              Our Partners
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose} color="inherit" component={Link} href="/projects/ongoing" sx={{
+              fontFamily: "Cursive, sans-serif",
+              fontSize: "1.1rem",
+              color: "#333",
+              '&:hover': {
+                backgroundColor: "#e0e0e0",
+              },
+            }}>
+              Our Work
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose} color="inherit" component={Link} href="/donate" sx={{
+              fontFamily: "Cursive, sans-serif",
+              fontSize: "1.1rem",
+              color: "#333",
+              '&:hover': {
+                backgroundColor: "#e0e0e0",
+              },
+            }}>
+              Contribute
+            </MenuItem>
+          </Menu>
 
           {/* Page Content */}
           {children}

@@ -46,7 +46,9 @@ const ElegantDivider: React.FC<{ icon?: React.ReactNode; text?: string }> = ({ i
 const NonProfitWebsite: React.FC = () => {
   return (
     <>
-      <Box sx={{ position: "relative", overflow: "hidden", height: "100vh" }}>
+      <Box sx={{
+        position: "relative", overflow: "hidden", height: { xs: '100vw', sm: '100vh' }
+      }}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           pagination={{ clickable: true }}
@@ -54,6 +56,7 @@ const NonProfitWebsite: React.FC = () => {
           loop
           speed={1000} // Increase the transition duration for smoother sliding
           style={{ width: "100%", height: "100vh" }}
+
         >
           <SwiperSlide>
             <Image
@@ -116,9 +119,32 @@ const NonProfitWebsite: React.FC = () => {
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", // Add a shadow for better visibility
             }}
           >
-            Futures of Kashmir!
+            Futures of Kashmir
           </Typography>
         </Box>
+        <style jsx global>{`
+          .responsive-image {
+            width: 100% !important;
+            display: block;
+            object-position: center;
+          }
+
+          @media (max-width: 600px) {
+            /* On mobile: square frame, show full image, no cropping */
+            .responsive-image {
+              height: auto !important;
+              object-fit: contain !important;
+            }
+          }
+
+          @media (min-width: 600px) {
+            /* On desktop: fill entire screen height, cover, no misalignment */
+            .responsive-image {
+              height: 100% !important;
+              object-fit: cover !important;
+            }
+          }
+        `}</style>
       </Box>
 
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
