@@ -355,7 +355,7 @@ const Projects: React.FC = () => {
             Our Partners
           </Typography>
           <Typography color="secondary" variant="body1" align="center" paragraph>
-            Our partner schools are dedicated to fostering educational equity and literacy in Azad Kashmir. These schools collaborate with us to ensure that underserved students have access to essential resources, innovative learning spaces, and support for holistic development. Together, we distribute textbooks, school supplies, and create library projects to inspire learning and growth. Partnering with schools such as Miri Roshni, Kali Nari, Motareen, and Kuyain, we work to uplift communities and nurture a brighter future for the region's youth.
+            Our partner schools are dedicated to fostering educational equity and literacy in Azad Kashmir. These schools collaborate with us to ensure that underserved students have access to essential resources, innovative learning spaces, and support for holistic development. Together, we distribute textbooks, school supplies, and create library projects to inspire learning and growth. Partnering with schools such as Miri Roshni, Kali Nari, Motareen, and Kuyain, we work to uplift communities and nurture a brighter future for the region&apos;s youth.
           </Typography>
 
           <Grid container spacing={4} sx={{ mt: 4 }}>
