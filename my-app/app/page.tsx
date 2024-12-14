@@ -51,7 +51,6 @@ const NonProfitWebsite: React.FC = () => {
       }}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          pagination={{ clickable: true }}
           autoplay={{ delay: 2500 }}
           loop
           speed={1000} // Increase the transition duration for smoother sliding
@@ -147,41 +146,7 @@ const NonProfitWebsite: React.FC = () => {
         `}</style>
       </Box>
 
-      <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
-      {/* Featured Instagram Post Section */}
-      <Box id="instagram" sx={{ py: 8, backgroundColor: 'grey.100' }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6} color="secondary">
-              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
-                Check Out Our Instagram
-              </Typography>
-              <Typography variant="body1" color="secondary" paragraph>
-                Stay connected with our journey and witness the transformative power of innovation! Be the first to explore our upcoming projects, crafted with a vision to inspire and make a difference              </Typography>
 
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <blockquote
-                className="instagram-media"
-                data-instgrm-permalink="https://www.instagram.com/futuresofkashmir/"
-                data-instgrm-version="14"
-                style={{
-                  margin: "1rem auto",
-                  maxWidth: "500px",
-                  width: "100%",
-                }}
-              ></blockquote>
-              <Script
-                src="//www.instagram.com/embed.js"
-                strategy="lazyOnload"
-                onLoad={() => {
-                  // Optional: If you need to handle something after the script loads
-                }}
-              />
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
 
       {/* Mission Section */}
@@ -194,7 +159,8 @@ const NonProfitWebsite: React.FC = () => {
                 height={350}
                 src="/images/landingpagemission.jpg"
                 alt="Our Mission"
-                style={{ width: '100%', borderRadius: 8 }}
+                // The style includes 'height: auto' to ensure the image maintains its aspect ratio
+                style={{ width: '100%', height: 'auto', borderRadius: 8 }}
               />
             </Grid>
             <Grid item xs={12} md={6} color="secondary">
@@ -534,7 +500,41 @@ const NonProfitWebsite: React.FC = () => {
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
 
 
-      {/* Contact Section */}
+      {/* Contact Section */}{/* Featured Instagram Post Section */}
+      <Box id="instagram" sx={{ py: 8, backgroundColor: 'grey.100' }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={12} md={6} color="secondary">
+              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
+                Check Out Our Instagram
+              </Typography>
+              <Typography variant="body1" color="secondary" paragraph>
+                Stay connected with our journey and witness the transformative power of innovation! Be the first to explore our upcoming projects, crafted with a vision to inspire and make a difference              </Typography>
+
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <blockquote
+                className="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/futuresofkashmir/"
+                data-instgrm-version="14"
+                style={{
+                  margin: "1rem auto",
+                  maxWidth: "500px",
+                  width: "100%",
+                }}
+              ></blockquote>
+              <Script
+                src="//www.instagram.com/embed.js"
+                strategy="lazyOnload"
+                onLoad={() => {
+                  // Optional: If you need to handle something after the script loads
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+      <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
 
 
 

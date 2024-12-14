@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Home
                 </Button>
                 <Button color="inherit" component={Link} href="/projects/partners">
-                  Our Partners
+                  About Us
                 </Button>
                 <Button color="inherit" component={Link} href="/projects/ongoing">
                   Our Work
@@ -97,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 backgroundColor: "#e0e0e0",
               },
             }}>
-              Our Partners
+              About Us
             </MenuItem>
             <MenuItem onClick={handleMenuClose} color="inherit" component={Link} href="/projects/ongoing" sx={{
               fontFamily: "Cursive, sans-serif",
