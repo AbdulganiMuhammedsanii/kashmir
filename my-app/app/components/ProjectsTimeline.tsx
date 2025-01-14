@@ -88,6 +88,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ project, index }) => {
           borderColor: theme.palette.secondary.main,
           opacity: 0.3,
           zIndex: 0,
+          display: { xs: 'none', sm: 'block' }, // Hide on extra small screens
         }}
       />
 
@@ -96,57 +97,70 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ project, index }) => {
         initial="hidden"
         animate={controls}
         style={{
-          display: "flex",
-          flexDirection: window.innerWidth < 600 ? "column" : isOdd ? "row-reverse" : "row", // Adjust for mobile
-          alignItems: "center",
           width: "100%",
           background: theme.palette.grey[100],
           borderRadius: "8px",
           overflow: "hidden",
           position: "relative",
           zIndex: 1,
+          // any other styling you want specifically on the motion.div
         }}
       >
-        {/* Image */}
+        {/* Wrap your flex container in an MUI Box */}
         <Box
           sx={{
-            flex: "1 1 300px",
-            textAlign: "center",
-            p: 2,
+            // MUI's breakpoint approach for responsive layout:
             display: "flex",
-            justifyContent: "center",
+            flexDirection: {
+              xs: "column",            // Below 600px wide
+              sm: isOdd ? "row-reverse" : "row", // 600px and above
+            },
             alignItems: "center",
-            backgroundColor: "grey.100",
+            width: "100%",
           }}
         >
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={430}
-            height={310}
-            style={{ objectFit: "cover", borderRadius: 8 }}
-          />
-        </Box>
+          {/* Image */}
+          <Box
+            sx={{
+              flex: "1 1 300px",
+              textAlign: "center",
+              p: 2,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "grey.100",
+            }}
+          >
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={430}
+              height={310}
+              style={{ objectFit: "cover", borderRadius: 8 }}
+            />
+          </Box>
 
-        {/* Content */}
-        <Box sx={{ flex: 2, p: 3 }}>
-          <Typography variant="h6" color="primary" gutterBottom>
-            {project.date}
-          </Typography>
-          <Typography variant="h5" color="secondary" gutterBottom>
-            {project.title}
-          </Typography>
-          {project.highlights.map((point, i) => (
-            <Typography
-              key={i}
-              variant="body2"
-              sx={{ mb: 1, color: "text.secondary" }}
-            >
-              • {point}
+          {/* Content */}
+          <Box sx={{ flex: 2, p: 3 }}>
+            <Typography variant="h6" color="primary" gutterBottom>
+              {project.date}
             </Typography>
-          ))}
+            <Typography variant="h5" color="secondary" gutterBottom>
+              {project.title}
+            </Typography>
+            {project.highlights.map((point, i) => (
+              <Typography
+                key={i}
+                variant="body2"
+                sx={{ mb: 1, color: "text.secondary" }}
+              >
+                • {point}
+              </Typography>
+            ))}
+          </Box>
         </Box>
       </motion.div>
+
     </Box>
   );
 };
