@@ -1,4 +1,3 @@
-"use client"; // For Next.js App Router if needed
 import React from "react";
 import { Box, Typography, useTheme, Divider } from "@mui/material";
 import Image from "next/image";
