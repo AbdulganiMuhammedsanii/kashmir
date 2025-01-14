@@ -2,7 +2,7 @@ export const projectsData = [
   {
     date: "Summer 2022",
     title: "Miri Roshni School Library Project",
-    image: "/images/bookshe.jpg",
+    image: "/images/bookshes.jpg",
     highlights: [
       "A library consisting of 418 books was established for students of the Miri Roshni school.",
       "Books in both English and Urdu ranging from fiction to nonfiction are available.",
