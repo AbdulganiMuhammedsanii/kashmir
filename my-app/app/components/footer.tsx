@@ -17,7 +17,7 @@ const footer: React.FC = () => {
             <Typography variant="body2">
               <Mail fontSize="small" /> futuresofkashmir@gmail.com
             </Typography>
-            <Typography variant="body2">3700 O St NW, Washington, DC 20057
+            <Typography variant="body2">2 Main Street, Irvington, New York, 10533
             </Typography>
           </Grid>
           <Grid item xs={12} md={4}>

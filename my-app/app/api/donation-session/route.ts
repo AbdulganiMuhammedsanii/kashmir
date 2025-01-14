@@ -2,22 +2,20 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
-  apiVersion: "2024-11-20.acacia", // Updated to the correct API version
+  apiVersion: "2024-11-20.acacia", // Make sure this matches your Stripe account's version
 });
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json(); // Parse the request body
-    const { amount, email } = body;
+    const body = await req.json();
+    const { amount, email, name } = body;
 
-    // Validate the amount and email
-    if (!amount || amount <= 0 || !email) {
-      return new NextResponse("Invalid donation amount or email", { status: 400 });
+    // Validate
+    if (!amount || amount <= 0 || !email || !name) {
+      return new NextResponse("Invalid donation amount, email, or name", { status: 400 });
     }
-    console.log(email);
 
     // Create a Stripe Checkout session
-    /* i needed to add payment_intent_data field where i set reciept_email to the email , which will send the confirmation email**/
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
@@ -33,16 +31,15 @@ export async function POST(req: Request) {
         },
       ],
       mode: "payment",
-      customer_email: email, // Still keep this for convenience at checkout
+      customer_email: email, // For convenience at checkout
       payment_intent_data: {
-        receipt_email: email, // This ensures a receipt is sent after successful payment
+        receipt_email: email,
+        description: `Donation by ${name}. Futures of Kashmir Inc is classified as a 509(a)(2) Public Charity organization by the standards of the Internal Revenue Service (IRS). Therefore, your donation is fully tax-deductible to the extent provided by law and based on your tax situation. Please note that a 2.2% transaction fee is applied to your donation. Your donation contributes to making sure that all children have supportive learning environments and access to an education that recognizes and uplifts their own sense of identity. The Futures of Kashmir team and recipients greatly appreciate your donation and hope you continue to support our mission. Sincerely, Futures of Kashmir.`
       },
       success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/donation-success`,
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/donation-cancel`,
     });
 
-
-    // Return the session URL to redirect the user
     return NextResponse.json({ url: session.url });
   } catch (error) {
     console.error("Error creating Stripe session:", error);

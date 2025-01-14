@@ -6,7 +6,7 @@ import {
 import axios from "axios";
 import Image from 'next/image';
 
-import { Public } from '@mui/icons-material';
+import { FormatItalic, Public } from '@mui/icons-material';
 const DonatePage: React.FC = () => {
   const [amount, setAmount] = useState<string>(""); // Use a string to start with an empty input
   const [email, setEmail] = useState<string>(""); // State for email
@@ -89,8 +89,20 @@ const DonatePage: React.FC = () => {
             {/* Form Section */}
             <Grid item xs={12} md={5}>
               <Typography variant="h4" gutterBottom color="primary">
-                Make a Donation
+                <i>Make a Donation, Support Our Mission</i>
               </Typography>
+              <Typography variant="body1" gutterBottom color="primary">
+                With your help we will be able to carry out our aim to ensure all children have supportive learning environments and access to an education that recognizes and uplifts their own sense of identity.
+              </Typography>
+              <TextField
+                fullWidth
+                label="Your name"
+                type="name"
+                value={name}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your name"
+                sx={{ my: 2 }}
+              />
               <TextField
                 fullWidth
                 label="Your Email"

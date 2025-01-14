@@ -112,10 +112,7 @@ const Projects: React.FC = () => {
           <Typography color="secondary" variant="h2" component="h2" align="center" gutterBottom>
             Our Team
           </Typography>
-          <Typography color="secondary" variant="body1" align="center" paragraph>
-            We are a non-profit organization dedicated to making a positive impact in the lives of
-            those in need. Our team works tirelessly to provide resources, support, and hope.
-          </Typography>
+
           <Grid container justifyContent="center" alignItems="center" spacing={4} sx={{ mt: 4 }}>
             {/* First Row */}
             <Grid item xs={12} md={4}>
@@ -142,11 +139,9 @@ const Projects: React.FC = () => {
                   />
                 </Box>
                 <Typography color="secondary" variant="h6" component="h3">
-                  Janeeta Shaukat, Founder
+                  Janeeta Shaukat, Founder and President
                 </Typography>
-                <Typography color="secondary" variant="body1">
-                  Janeeta is a Senior at the Georgetown School of Health studying Global Health.
-                </Typography>
+
               </Box>
             </Grid>
 
@@ -176,9 +171,36 @@ const Projects: React.FC = () => {
                 <Typography color="secondary" variant="h6" component="h3">
                   Umer, On-ground Manager
                 </Typography>
-                <Typography color="secondary" variant="body1">
-                  Umer is a former Miri Roshni Student who served as head boy, directing extra help sessions.
+
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box>
+                <Box
+                  sx={{
+                    height: 300,
+                    overflow: 'hidden',
+                    borderRadius: 2,
+                    mb: 2,
+                  }}
+                >
+                  <Image
+                    src="/images/ikram.png"
+                    alt="Ikram"
+                    width={400}
+                    height={400}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: 8,
+                      objectFit: 'cover',
+                    }}
+                  />
+                </Box>
+                <Typography color="secondary" variant="h6" component="h3">
+                  Ikram Muhammadsani, Director of Programs and Innovation
                 </Typography>
+
               </Box>
             </Grid>
 
@@ -208,8 +230,6 @@ const Projects: React.FC = () => {
                 <Typography color="secondary" variant="h6" component="h3">
                   Nile Adhami
                 </Typography>
-                <Typography color="secondary" variant="body1">
-                  Nile is a Junior in the Georgetown College studying Government with a minor in Justice & Peace Studies.                </Typography>
               </Box>
             </Grid>
 
@@ -240,43 +260,11 @@ const Projects: React.FC = () => {
                 <Typography color="secondary" variant="h6" component="h3">
                   Meer Malik
                 </Typography>
-                <Typography color="secondary" variant="body1">
-                  Meer is a Senior the Georgetown University School of Foreign Service studying International Politics.
-                </Typography>
+
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={4}>
-              <Box>
-                <Box
-                  sx={{
-                    height: 300,
-                    overflow: 'hidden',
-                    borderRadius: 2,
-                    mb: 2,
-                  }}
-                >
-                  <Image
-                    src="/images/ikram.png"
-                    alt="Ikram"
-                    width={400}
-                    height={400}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      borderRadius: 8,
-                      objectFit: 'cover',
-                    }}
-                  />
-                </Box>
-                <Typography color="secondary" variant="h6" component="h3">
-                  Ikram Muhammedsani
-                </Typography>
-                <Typography color="secondary" variant="body1">
-                  Ikram is a Junior in the Georgetown University School of Health majoring in Human Science with a minor in Islam & Christian Understanding.
-                </Typography>
-              </Box>
-            </Grid>
+
 
             <Grid item xs={12} md={4}>
               <Box>
@@ -304,8 +292,7 @@ const Projects: React.FC = () => {
                 <Typography color="secondary" variant="h6" component="h3">
                   Aminah Yusuf
                 </Typography>
-                <Typography color="secondary" variant="body1">
-                  Aminah is a Senior at Georgetown School of Foreign Service studying International Political Economy with a minor in Islam & Christian Understanding.                </Typography>
+
               </Box>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -334,9 +321,7 @@ const Projects: React.FC = () => {
                 <Typography color="secondary" variant="h6" component="h3">
                   Sarah Ali
                 </Typography>
-                <Typography color="secondary" variant="body1">
-                  Sarah is a Sophmore in the Georgetown College studying Computer Science.
-                </Typography>
+
               </Box>
             </Grid>
           </Grid>
@@ -355,68 +340,22 @@ const Projects: React.FC = () => {
             Our Partners
           </Typography>
           <Typography color="secondary" variant="body1" align="center" paragraph>
-            Our partner schools are dedicated to fostering educational equity and literacy in Azad Kashmir. These schools collaborate with us to ensure that underserved students have access to essential resources, innovative learning spaces, and support for holistic development. Together, we distribute textbooks, school supplies, and create library projects to inspire learning and growth. Partnering with schools such as Miri Roshni, Kali Nari, Motareen, and Kuyain, we work to uplift communities and nurture a brighter future for the region&apos;s youth.
-          </Typography>
+            Our partner schools are dedicated to fostering educational equity and literacy in Azad Kashmir. These schools collaborate with us to ensure that underserved students have access to essential resources, innovative learning spaces, and support for holistic development. Together, we distribute textbooks, school supplies, and create library projects to inspire learning and growth.           </Typography>
 
           <Grid container spacing={4} sx={{ mt: 4 }}>
-            {/* Left Side: Image */}
-            <Grid item xs={12} md={12} justifyContent="center" alignItems="center">
-              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
+            {/* First Row: Titles */}
+            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
+              <Typography variant="h5" color="secondary" component="h2" gutterBottom>
                 Miri Roshni School
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                }}
-              >
-                <Image
-                  src="/images/mirirosh.png" // Replace with your image path
-                  alt="School Supply Distribution"
-                  width={400}
-                  height={400}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 8,
-                  }}
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                }}
-              >
-                <Image
-                  src="/images/library3.png" // Replace with your image path
-                  alt="School Supply Distribution"
-                  width={200}
-                  height={200}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 8,
-                  }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={12}>
-              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
+            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
+              <Typography variant="h5" color="secondary" component="h2" gutterBottom>
                 Kali Nari School
               </Typography>
             </Grid>
-
-            <Grid item xs={12} md={6}>
+            {/* First Row: Images */}
+            <Grid item xs={6} md={6}>
               <Box
                 sx={{
                   height: '100%',
@@ -425,7 +364,7 @@ const Projects: React.FC = () => {
                 }}
               >
                 <Image
-                  src="/images/karimari.png" // Replace with your image path
+                  src="/images/mirirosh.png"
                   alt="School Supply Distribution"
                   width={400}
                   height={400}
@@ -438,7 +377,7 @@ const Projects: React.FC = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={6} md={6}>
               <Box
                 sx={{
                   height: '100%',
@@ -447,7 +386,7 @@ const Projects: React.FC = () => {
                 }}
               >
                 <Image
-                  src="/images/kalinari.png" // Replace with your image path
+                  src="/images/karimari.png"
                   alt="School Supply Distribution"
                   width={400}
                   height={400}
@@ -460,12 +399,19 @@ const Projects: React.FC = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} md={12}>
-              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
+            {/* Second Row: Titles */}
+            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
+              <Typography variant="h5" color="secondary" component="h2" gutterBottom>
                 Motareen School
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
+              <Typography variant="h5" color="secondary" component="h2" gutterBottom>
+                Kuyain School
+              </Typography>
+            </Grid>
+            {/* Second Row: Images */}
+            <Grid item xs={6} md={6}>
               <Box
                 sx={{
                   height: '100%',
@@ -474,7 +420,7 @@ const Projects: React.FC = () => {
                 }}
               >
                 <Image
-                  src="/images/motareen.png" // Replace with your image path
+                  src="/images/motareen.png"
                   alt="Motareen School"
                   width={400}
                   height={400}
@@ -487,27 +433,7 @@ const Projects: React.FC = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Image
-                src="/images/motareeninfo.png" // Replace with your image path
-                alt="Motareen School"
-                width={400}
-                height={400}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: 8,
-                }}
-              />
-            </Grid>
-
-            <Grid item xs={12} md={12}>
-              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
-                Kuyain School
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={6} md={6}>
               <Box
                 sx={{
                   height: '100%',
@@ -516,29 +442,7 @@ const Projects: React.FC = () => {
                 }}
               >
                 <Image
-                  src="/images/kuyain.png" // Replace with your image path
-                  alt="School Supply Distribution"
-                  width={400}
-                  height={400}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 8,
-                  }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                }}
-              >
-                <Image
-                  src="/images/kuyaininfo.png" // Replace with your image path
+                  src="/images/kuyain.png"
                   alt="School Supply Distribution"
                   width={400}
                   height={400}
@@ -553,64 +457,13 @@ const Projects: React.FC = () => {
             </Grid>
           </Grid>
         </Container>
-      </Box>
+      </Box >
 
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
 
 
       {/* Impact Section */}
-      <Box id="school-supply-distribution" sx={{ py: 8, backgroundColor: 'grey.100' }}>
-        <Container maxWidth="lg">
 
-          <Grid container spacing={4} sx={{ mt: 4 }}>
-            {/* Centered Text */}
-            <Grid item xs={12}>
-              <Typography
-                variant="h3"
-                color="secondary"
-                component="h2"
-                gutterBottom
-                align="center" // Centers the text
-              >
-                On Ground Partners
-              </Typography>
-            </Grid>
-
-            {/* Text and Image Side by Side */}
-            <Grid item xs={12} md={6}>
-              <Typography variant="h4" color="secondary" component="h2" gutterBottom>
-                Barmung Khurd Welfare Trust
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                  display: 'flex', // Ensures image alignment in its box
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <Image
-                  src="/images/motareen.png" // Replace with your image path
-                  alt="Motareen School"
-                  width={400}
-                  height={400}
-                  style={{
-                    width: '100%',
-                    height: 'auto', // Maintains aspect ratio
-                    objectFit: 'cover',
-                    borderRadius: 8,
-                  }}
-                />
-              </Box>
-            </Grid>
-          </Grid>
-
-        </Container>
-      </Box>
 
 
 

@@ -168,10 +168,9 @@ const NonProfitWebsite: React.FC = () => {
                 Our Mission
               </Typography>
               <Typography variant="body1" color="secondary" paragraph>
-                Futures of Kashmir is an organization dedicated to the cause of advancing educational equity and access to literacy in Azad Kashmir.
-              </Typography>
+                Futures of Kashmir is an organization dedicated to the cause of advancing educational equity and access to literacy in Azad Kashmir.              </Typography>
               <Typography variant="body1" color="secondary" paragraph>
-                The organization works with stakeholders in Kashmir to provide educational reosurces to underserved communities, create innovative learning spaces, and emphasize a whole-child approach to education. Our guiding principle is the fundemental idea that all children deserve supportive learning environments and access to an education that recognizes and uplifts their own sense of identity.
+                The organization works with stakeholders in Kashmir to provide educational <b>resources</b> to underserved communities, create <b>innovative learning spaces</b>, and emphasize a <b>whole-child approach</b> to education. Our guiding principle is the fundamental idea that all children deserve <b>supportive learning environments</b> and access to an education that recognizes and uplifts their own sense of identity.
               </Typography>
             </Grid>
           </Grid>
@@ -184,57 +183,95 @@ const NonProfitWebsite: React.FC = () => {
       <Box id="impact" sx={{ py: 8, backgroundColor: 'grey.100' }}>
         <Container maxWidth="lg">
           <Typography variant="h3" color="secondary" component="h2" align="center" gutterBottom>
-            Impact
+            Recognitions
           </Typography>
           <Grid container spacing={4} sx={{ mt: 4 }}>
 
+
             <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: '100%',
-                  overflow: 'hidden',
-                  borderRadius: 2,
-                }}
-              >
-                <Image
-                  src="/images/school.png" // Replace with your image path
-                  alt="Miri Roshni School Library Project"
-                  width={400}
-                  height={400}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 8,
+              <Box sx={{
+                position: "relative", overflow: "hidden", height: { xs: '50vw', sm: '50vh' }
+              }}>
+                <Swiper
+                  modules={[Navigation, Pagination, Autoplay]}
+                  autoplay={{ delay: 2500 }}
+                  loop
+                  speed={1000} // Increase the transition duration for smoother sliding
+                  style={{ width: "100%", height: "100%" }} // Adjusted height to fit the box
+
+                >
+                  <SwiperSlide>
+                    <Image
+                      src="/images/gipc.png"
+                      alt="Slide 1"
+                      width={400}
+                      height={300} // Set a fixed height
+                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/projforpeace.png"
+                      alt="Slide 2"
+                      width={400}
+                      height={300} // Set a fixed height
+                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/sips.png"
+                      alt="Slide 3"
+                      width={400}
+                      height={300} // Set a fixed height
+                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
+                    />
+                  </SwiperSlide>
+                </Swiper>
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "rgba(0, 0, 0, 0)", // Optional overlay for better text contrast
+                    zIndex: 2, // Ensure text is above the carousel
+                    textAlign: "center",
                   }}
-                />
+                >
+
+                </Box>
+                <style jsx global>{`
+          .responsive-image {
+            width: 100% !important;
+            display: block;
+            object-position: center;
+          }
+
+          @media (max-width: 600px) {
+            /* On mobile: square frame, show full image, no cropping */
+            .responsive-image {
+              height: auto !important;
+              object-fit: contain !important;
+            }
+          }
+
+          @media (min-width: 600px) {
+            /* On desktop: fill entire screen height, cover, no misalignment */
+            .responsive-image {
+              height: 100% !important;
+              object-fit: cover !important;
+            }
+          }
+        `}</style>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Typography variant="h5" color="secondary" component="h3" gutterBottom>
-                Accomplishments
-              </Typography>
-              <Typography variant="body1" color="secondary" gutterBottom>
-                <strong>Summer 2022:</strong> Miri Roshni School Library Project
-              </Typography>
-              <Typography variant="body2" color="secondary" gutterBottom>
-                - A library consisting of 418 books was established for students of the Miri Roshni
-                school.
-                <br />
-                - Books in both English and Urdu ranging from fiction to nonfiction are available.
-                <br />
-                - Regular classroom visits have been implemented.
-              </Typography>
-              <Typography variant="body1" color="secondary" gutterBottom>
-                <strong>School Supply Distribution:</strong>
-              </Typography>
-              <Typography variant="body2" color="secondary" gutterBottom>
-                - 232 textbooks were distributed to low-income students in our partner schools of
-                Khaigala, Kuyain, Kali Bari, and Motareen.
-                <br />
-                - Over 200 students received additional stationery such as notebooks, pens, and pencils.
-              </Typography>
-              <Typography variant="h5" color="secondary" component="h3" sx={{ mt: 4 }} gutterBottom>
+              <Typography variant="h5" color="secondary" component="h3" sx={{ mt: 2, mb: 1 }} gutterBottom>
                 Recognitions
               </Typography>
               <Typography variant="body2" color="secondary" gutterBottom>
@@ -266,7 +303,8 @@ const NonProfitWebsite: React.FC = () => {
                 Check Out Our Instagram
               </Typography>
               <Typography variant="body1" color="secondary" paragraph>
-                Stay connected with our journey and witness the transformative power of innovation! Be the first to explore our upcoming projects, crafted with a vision to inspire and make a difference              </Typography>
+                Stay connected with our journey and be the first to explore our upcoming projects!
+              </Typography>
 
             </Grid>
             <Grid item xs={12} md={6}>
