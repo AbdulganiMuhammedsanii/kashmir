@@ -6,7 +6,7 @@ import {
 import axios from "axios";
 import Image from 'next/image';
 
-import { FormatItalic, Public } from '@mui/icons-material';
+import { Public } from '@mui/icons-material';
 const DonatePage: React.FC = () => {
   const [amount, setAmount] = useState<string>(""); // Use a string to start with an empty input
   const [email, setEmail] = useState<string>(""); // State for email

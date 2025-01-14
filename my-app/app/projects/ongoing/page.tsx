@@ -3,21 +3,16 @@
 import React from "react";
 import {
   Typography,
-  Container,
   Box,
-  Grid,
   Divider,
 } from '@mui/material';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Public } from '@mui/icons-material';
-import { Swiper, SwiperSlide } from "swiper/react";
 // ... existing code ...
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import ProjectsTimeline from "../../components/ProjectsTimeline"; // adapt your path
 
-import Image from 'next/image';
 
 
 const ElegantDivider: React.FC<{ icon?: React.ReactNode; text?: string }> = ({ icon, text }) => (
