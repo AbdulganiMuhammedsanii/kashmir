@@ -10,6 +10,8 @@ import { Public } from '@mui/icons-material';
 const DonatePage: React.FC = () => {
   const [amount, setAmount] = useState<string>(""); // Use a string to start with an empty input
   const [email, setEmail] = useState<string>(""); // State for email
+  const [name, setName] = useState<string>(""); // Use a string to start with an empty input
+
 
   const handleDonate = async () => {
     const donationAmount = parseFloat(amount);
@@ -97,9 +99,9 @@ const DonatePage: React.FC = () => {
               <TextField
                 fullWidth
                 label="Your name"
-                type="name"
+                type="text"
                 value={name}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name"
                 sx={{ my: 2 }}
               />
