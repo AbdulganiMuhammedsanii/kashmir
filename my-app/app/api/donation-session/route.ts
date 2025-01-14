@@ -9,9 +9,10 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { amount, email, name } = body;
-
+    console.log(amount, email, name);
     // Validate
     if (!amount || amount <= 0 || !email || !name) {
+      console.log("heyy");
       return new NextResponse("Invalid donation amount, email, or name", { status: 400 });
     }
 

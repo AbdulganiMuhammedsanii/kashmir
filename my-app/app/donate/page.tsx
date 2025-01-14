@@ -24,7 +24,8 @@ const DonatePage: React.FC = () => {
     try {
       const response = await axios.post("/api/donation-session", {
         amount: donationAmount,
-        email
+        email,
+        name
       });
       window.location.href = response.data.url; // Redirect to Stripe
     } catch (error) {
