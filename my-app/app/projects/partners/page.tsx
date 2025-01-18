@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
         position: "relative", overflow: "hidden", height: { xs: '100vw', sm: '100vh' }
       }}>
         <Image
-          src="/images/booklibrary.png"
+          src="/images/aboutuss.jpg"
           alt="Slide 1"
           width={400}
           height={400}
@@ -215,6 +215,96 @@ const Projects: React.FC = () => {
                   }}
                 >
                   <Image
+                    src="/images/manahal.jpg"
+                    alt="Manahal"
+                    width={400}
+                    height={400}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: 8,
+                      objectFit: 'cover',
+                    }}
+                  />
+                </Box>
+                <Typography color="secondary" variant="h6" component="h3">
+                  Manahal Faizal, Director of Financial Operations
+                </Typography>
+
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box>
+                <Box
+                  sx={{
+                    height: 300,
+                    overflow: 'hidden',
+                    borderRadius: 2,
+                    mb: 2,
+                  }}
+                >
+                  <Image
+                    src="/images/isabel.png"
+                    alt="Isabel"
+                    width={400}
+                    height={400}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: 8,
+                      objectFit: 'cover',
+                    }}
+                  />
+                </Box>
+                <Typography color="secondary" variant="h6" component="h3">
+                  Isabel Powell, Director of Development and Sustainability
+                </Typography>
+
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} md={4}>
+              <Box>
+                <Box
+                  sx={{
+                    height: 300,
+                    overflow: 'hidden',
+                    borderRadius: 2,
+                    mb: 2,
+                  }}
+                >
+                  <Image
+                    src="/images/abbypark.png"
+                    alt="Ikram"
+                    width={400}
+                    height={400}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: 8,
+                      objectFit: 'cover',
+                    }}
+                  />
+                </Box>
+                <Typography color="secondary" variant="h6" component="h3">
+                  Abby Park, Director of Content and Communications
+                </Typography>
+
+              </Box>
+            </Grid>
+
+
+            <Grid item xs={12} md={4}>
+              <Box>
+                <Box
+                  sx={{
+                    height: 300,
+                    overflow: 'hidden',
+                    borderRadius: 2,
+                    mb: 2,
+                  }}
+                >
+                  <Image
                     src="/images/nile.png"
                     alt="Nile"
                     width={400}
@@ -328,7 +418,7 @@ const Projects: React.FC = () => {
 
 
         </Container>
-      </Box>
+      </Box >
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
 
 

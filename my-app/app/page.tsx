@@ -47,7 +47,7 @@ const NonProfitWebsite: React.FC = () => {
   return (
     <>
       <Box sx={{
-        position: "relative", overflow: "hidden", height: { xs: '100vw', sm: '100vh' }
+        position: "relative", overflow: "hidden", height: { xs: '100vh', sm: '100vh' }
       }}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -59,7 +59,7 @@ const NonProfitWebsite: React.FC = () => {
         >
           <SwiperSlide>
             <Image
-              src="/images/motareen.png"
+              src="/images/smiling.jpg"
               alt="Slide 1"
               width={400}
               height={400}
@@ -68,7 +68,7 @@ const NonProfitWebsite: React.FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/mirirosh.png"
+              src="/images/reading.jpg"
               alt="Slide 2"
               width={400}
               height={400}
@@ -77,7 +77,7 @@ const NonProfitWebsite: React.FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/karimari.png"
+              src="/images/pointing.jpg"
               alt="Slide 3"
               width={400}
               height={400}
@@ -86,7 +86,16 @@ const NonProfitWebsite: React.FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/khaigala.png"
+              src="/images/lookingdown.jpg"
+              alt="Slide 4"
+              width={400}
+              height={400}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/learning.jpg"
               alt="Slide 4"
               width={400}
               height={400}
@@ -205,8 +214,8 @@ const NonProfitWebsite: React.FC = () => {
                       src="/images/gipc.png"
                       alt="Slide 1"
                       width={400}
-                      height={300} // Set a fixed height
-                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
+                      height={250} // Set a fixed height
+                      style={{ width: "100%", height: "250px", objectFit: "contain" }} // Set a fixed height
                     />
                   </SwiperSlide>
                   <SwiperSlide>
@@ -214,8 +223,8 @@ const NonProfitWebsite: React.FC = () => {
                       src="/images/projforpeace.png"
                       alt="Slide 2"
                       width={400}
-                      height={300} // Set a fixed height
-                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
+                      height={250} // Set a fixed height
+                      style={{ width: "100%", height: "250px", objectFit: "contain" }} // Set a fixed height
                     />
                   </SwiperSlide>
                   <SwiperSlide>
@@ -223,8 +232,17 @@ const NonProfitWebsite: React.FC = () => {
                       src="/images/sips.png"
                       alt="Slide 3"
                       width={400}
-                      height={300} // Set a fixed height
-                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
+                      height={250} // Set a fixed height
+                      style={{ width: "100%", height: "250px", objectFit: "contain" }} // Set a fixed height
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/news.png"
+                      alt="Slide 3"
+                      width={400}
+                      height={250} // Set a fixed height
+                      style={{ width: "100%", height: "250px", objectFit: "contain" }} // Set a fixed height
                     />
                   </SwiperSlide>
                 </Swiper>
