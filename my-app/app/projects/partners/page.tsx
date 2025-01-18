@@ -244,7 +244,7 @@ const Projects: React.FC = () => {
                   }}
                 >
                   <Image
-                    src="/images/isabel.png"
+                    src="/images/Isabel.png"
                     alt="Isabel"
                     width={400}
                     height={400}
