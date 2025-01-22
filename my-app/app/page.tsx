@@ -102,6 +102,51 @@ const NonProfitWebsite: React.FC = () => {
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/kid.jpg"
+              alt="Kid"
+              width={400}
+              height={400}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/kid1.jpg"
+              alt="Kid 1"
+              width={400}
+              height={400}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/kid3.jpg"
+              alt="Kid 3"
+              width={400}
+              height={400}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/kid4.jpg"
+              alt="Kid 4"
+              width={400}
+              height={400}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/kid5.jpg"
+              alt="Kid 5"
+              width={400}
+              height={400}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
         </Swiper>
         <Box
           sx={{
@@ -197,7 +242,7 @@ const NonProfitWebsite: React.FC = () => {
           <Grid container spacing={4} sx={{ mt: 4 }}>
 
 
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={12}>
               <Box sx={{
                 position: "relative", overflow: "hidden", height: { xs: '50vw', sm: '50vh' }
               }}>
@@ -214,8 +259,8 @@ const NonProfitWebsite: React.FC = () => {
                       src="/images/gipc.png"
                       alt="Slide 1"
                       width={400}
-                      height={250} // Set a fixed height
-                      style={{ width: "100%", height: "250px", objectFit: "contain" }} // Set a fixed height
+                      height={300} // Set a fixed height
+                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
                     />
                   </SwiperSlide>
                   <SwiperSlide>
@@ -223,8 +268,8 @@ const NonProfitWebsite: React.FC = () => {
                       src="/images/projforpeace.png"
                       alt="Slide 2"
                       width={400}
-                      height={250} // Set a fixed height
-                      style={{ width: "100%", height: "250px", objectFit: "contain" }} // Set a fixed height
+                      height={300} // Set a fixed height
+                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
                     />
                   </SwiperSlide>
                   <SwiperSlide>
@@ -232,8 +277,8 @@ const NonProfitWebsite: React.FC = () => {
                       src="/images/sips.png"
                       alt="Slide 3"
                       width={400}
-                      height={250} // Set a fixed height
-                      style={{ width: "100%", height: "250px", objectFit: "contain" }} // Set a fixed height
+                      height={300} // Set a fixed height
+                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
                     />
                   </SwiperSlide>
                   <SwiperSlide>
@@ -241,8 +286,8 @@ const NonProfitWebsite: React.FC = () => {
                       src="/images/news.png"
                       alt="Slide 3"
                       width={400}
-                      height={250} // Set a fixed height
-                      style={{ width: "100%", height: "250px", objectFit: "contain" }} // Set a fixed height
+                      height={300} // Set a fixed height
+                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
                     />
                   </SwiperSlide>
                 </Swiper>
@@ -287,24 +332,6 @@ const NonProfitWebsite: React.FC = () => {
           }
         `}</style>
               </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Typography variant="h5" color="secondary" component="h3" sx={{ mt: 2, mb: 1 }} gutterBottom>
-                Recognitions
-              </Typography>
-              <Typography variant="body2" color="secondary" gutterBottom>
-                <strong>Social Innovation and Public Service Fund (SIPS):</strong>
-                <br />
-                In January 2022, Futures of Kashmir (formerly Read-Aloud Kashmir) received a grant of
-                $7,250 from SIPS. SIPS is a $1.5 million student-run fund at Georgetown University that
-                annually awards funding to support projects serving the public good.
-              </Typography>
-              <Typography variant="body2" color="secondary" gutterBottom>
-                <strong>Global Impact Pitch Competition (GIPC):
-                </strong>
-                <br />
-                In 2024, Futures of Kashmir received a $1,000 award from Georgetown University&apos;s Global Impact Pitch Competition (GIPC). Led by Janeeta Shaukat (SOH &apos;24), the project was celebrated for its initiative to create libraries and empower low-income Kashmiri students through literacy, demonstrating its potential for international impact.
-              </Typography>
             </Grid>
           </Grid>
         </Container>

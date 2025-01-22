@@ -185,7 +185,7 @@ const Projects: React.FC = () => {
                   }}
                 >
                   <Image
-                    src="/images/ikram.png"
+                    src="/images/faceless.png"
                     alt="Ikram"
                     width={400}
                     height={400}
@@ -293,127 +293,6 @@ const Projects: React.FC = () => {
               </Box>
             </Grid>
 
-
-            <Grid item xs={12} md={4}>
-              <Box>
-                <Box
-                  sx={{
-                    height: 300,
-                    overflow: 'hidden',
-                    borderRadius: 2,
-                    mb: 2,
-                  }}
-                >
-                  <Image
-                    src="/images/nile.png"
-                    alt="Nile"
-                    width={400}
-                    height={400}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      borderRadius: 8,
-                      objectFit: 'cover',
-                    }}
-                  />
-                </Box>
-                <Typography color="secondary" variant="h6" component="h3">
-                  Nile Adhami
-                </Typography>
-              </Box>
-            </Grid>
-
-            {/* Second Row */}
-            <Grid item xs={12} md={4}>
-              <Box>
-                <Box
-                  sx={{
-                    height: 300,
-                    overflow: 'hidden',
-                    borderRadius: 2,
-                    mb: 2,
-                  }}
-                >
-                  <Image
-                    src="/images/meer.png"
-                    alt="Meer"
-                    width={400}
-                    height={400}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      borderRadius: 8,
-                      objectFit: 'cover',
-                    }}
-                  />
-                </Box>
-                <Typography color="secondary" variant="h6" component="h3">
-                  Meer Malik
-                </Typography>
-
-              </Box>
-            </Grid>
-
-
-
-            <Grid item xs={12} md={4}>
-              <Box>
-                <Box
-                  sx={{
-                    height: 300,
-                    overflow: 'hidden',
-                    borderRadius: 2,
-                    mb: 2,
-                  }}
-                >
-                  <Image
-                    src="/images/aminah.png"
-                    alt="Aminah"
-                    width={400}
-                    height={400}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      borderRadius: 8,
-                      objectFit: 'cover',
-                    }}
-                  />
-                </Box>
-                <Typography color="secondary" variant="h6" component="h3">
-                  Aminah Yusuf
-                </Typography>
-
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box>
-                <Box
-                  sx={{
-                    height: 300,
-                    overflow: 'hidden',
-                    borderRadius: 2,
-                    mb: 2,
-                  }}
-                >
-                  <Image
-                    src="/images/sarah.png"
-                    alt="Sarah"
-                    width={400}
-                    height={400}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      borderRadius: 8,
-                      objectFit: 'cover',
-                    }}
-                  />
-                </Box>
-                <Typography color="secondary" variant="h6" component="h3">
-                  Sarah Ali
-                </Typography>
-
-              </Box>
-            </Grid>
           </Grid>
 
 

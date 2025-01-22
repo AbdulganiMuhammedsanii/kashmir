@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Home
                 </Button>
                 <Button color="inherit" component={Link} href="/projects/partners">
-                  About Us
+                  Our Team
                 </Button>
                 <Button color="inherit" component={Link} href="/projects/ongoing">
                   Our Work
