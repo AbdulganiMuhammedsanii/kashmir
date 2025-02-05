@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import {
-  Box, Typography, TextField, Button, Container, Grid, Divider,
+  Box, Typography, TextField, Button, Container, Grid, Divider
 } from "@mui/material";
 import axios from "axios";
 import Image from 'next/image';
@@ -13,7 +13,7 @@ const DonatePage: React.FC = () => {
   const [name, setName] = useState<string>(""); // Use a string to start with an empty input
 
 
-  const handleDonate = async () => {
+  const handleDonate = async (donation_type: string) => {
     const donationAmount = parseFloat(amount);
 
     if (!donationAmount || donationAmount <= 0 || !email) {
@@ -25,7 +25,8 @@ const DonatePage: React.FC = () => {
       const response = await axios.post("/api/donation-session", {
         amount: donationAmount,
         email,
-        name
+        name,
+        donation_type
       });
       window.location.href = response.data.url; // Redirect to Stripe
     } catch (error) {
@@ -128,10 +129,21 @@ const DonatePage: React.FC = () => {
                 variant="contained"
                 color="primary"
                 size="large"
-                onClick={handleDonate}
+                onClick={() => handleDonate("Ramadan Donation")}
+              >
+                Ramadan Fundraising
+              </Button>
+
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                onClick={() => handleDonate("Custom Donation")}
+                sx={{ ml: 2 }}
               >
                 Donate
               </Button>
+
             </Grid>
           </Grid>
         </Container>
