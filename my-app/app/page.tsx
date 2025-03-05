@@ -222,9 +222,9 @@ const NonProfitWebsite: React.FC = () => {
                 Our Mission
               </Typography>
               <Typography variant="body1" color="secondary" paragraph>
-                Futures of Kashmir is an organization dedicated to the cause of advancing educational equity and access to literacy in Azad Kashmir.              </Typography>
+                Futures of Kashmir works to build a generation of <b>empowered learners</b> in Azad Kashmir by partnering with communities to create <b>equitable educational spaces</b> that inspire creativity and celebrate identity and potential.</Typography>
               <Typography variant="body1" color="secondary" paragraph>
-                The organization works with stakeholders in Kashmir to provide educational <b>resources</b> to underserved communities, create <b>innovative learning spaces</b>, and emphasize a <b>whole-child approach</b> to education. Our guiding principle is the fundamental idea that all children deserve <b>supportive learning environments</b> and access to an education that recognizes and uplifts their own sense of identity.
+                The organization works and advocates with stakeholders in Azad Kashmir to provide educational resources to underserved communities, create innovative learning spaces, and emphasize a whole-child approach to education. Our guiding principle is the fundamental idea that <b>all children deserve supportive learning environments</b> and access to an education that recognizes and uplifts their own sense of identity.
               </Typography>
             </Grid>
           </Grid>
