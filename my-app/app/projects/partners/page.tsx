@@ -462,7 +462,7 @@ const Projects: React.FC = () => {
             </Grid>
             <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
               <Typography variant="subtitle1" color="secondary" component="h2" gutterBottom>
-                Benish Latif, Head Teacher at Kali Nari Girls' Primary School.
+                Benish Latif, Head Teacher at Kali Nari Girls&apos; Primary School.
               </Typography>
             </Grid>
 
@@ -473,7 +473,7 @@ const Projects: React.FC = () => {
             </Grid>
             <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
               <Typography variant="subtitle1" color="secondary" component="h2" gutterBottom>
-                [Name], Director of Education for the Girls' School Sector in the Kashmir district.
+                [Name], Director of Education for the Girls&apos; School Sector in the Kashmir district.
               </Typography>
             </Grid>
           </Grid>
