@@ -131,7 +131,7 @@ const DonatePage: React.FC = () => {
                 size="large"
                 onClick={() => handleDonate("Ramadan Donation")}
               >
-                Ramadan Fundraising
+                Sadaqah Jariyah
               </Button>
 
               <Button
