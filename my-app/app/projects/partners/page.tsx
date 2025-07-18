@@ -429,56 +429,7 @@ const Projects: React.FC = () => {
         </Container>
       </Box >
 
-      <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
 
-
-      {/* Impact Section */}
-
-      <Box id="school-supply-distribution" sx={{ py: 8, backgroundColor: 'grey.100' }}>
-        <Container maxWidth="lg">
-          <Typography color="secondary" variant="h4" component="h4" align="center" gutterBottom>
-            Board of Directors
-          </Typography>
-
-          <Grid container spacing={2} sx={{ mt: 3 }}>
-            {/* First Row: Titles */}
-            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
-              <Typography variant="subtitle1" color="secondary" component="h2" gutterBottom>
-                Nabeel Hussain, Engineer, affiliated with the Red Crescent.
-              </Typography>
-            </Grid>
-            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
-              <Typography variant="subtitle1" color="secondary" component="h2" gutterBottom>
-                Iltaf Hussain, Chief of Barmung.
-              </Typography>
-            </Grid>
-            {/* First Row: Images */}
-
-            {/* Second Row: Titles */}
-            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
-              <Typography variant="subtitle1" color="secondary" component="h2" gutterBottom>
-                Hanif Hijazi, Director of MRS, has experience working with UNICEF.
-              </Typography>
-            </Grid>
-            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
-              <Typography variant="subtitle1" color="secondary" component="h2" gutterBottom>
-                Benish Latif, Head Teacher at Kali Nari Girls&apos; Primary School.
-              </Typography>
-            </Grid>
-
-            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
-              <Typography variant="subtitle1" color="secondary" component="h2" gutterBottom>
-                Ahmar Choudry, Director of the Barmung Khurd Welfare Trust.
-              </Typography>
-            </Grid>
-            <Grid item xs={6} md={6} justifyContent="center" alignItems="center">
-              <Typography variant="subtitle1" color="secondary" component="h2" gutterBottom>
-                [Name], Director of Education for the Girls&apos; School Sector in the Kashmir district.
-              </Typography>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box >
 
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
 
