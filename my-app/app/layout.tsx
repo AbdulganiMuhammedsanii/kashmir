@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Image from 'next/image';
+import './globals.css';
 
 import Footer from "./components/footer";
 
@@ -12,6 +13,7 @@ const theme = createTheme({
   palette: {
     primary: { main: "#FFA500" },
     secondary: { main: "#195905" },
+    background: { default: "#f5f5f5", paper: "#f5f5f5" },
   },
   typography: {
     fontFamily: "ITC Galliard Roman, Georgia, serif",
@@ -31,8 +33,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" style={{ backgroundColor: "#f5f5f5" }}>
+      <body style={{ backgroundColor: "#f5f5f5" }}>
         <ThemeProvider theme={theme}>
           <AppBar position="static">
             <Toolbar>
@@ -76,6 +78,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)", // Soft shadow
               borderRadius: "8px", // Rounded corners
               padding: "10px", // Padding around the menu
+            }}
+            PaperProps={{
+              sx: { backgroundColor: 'background.paper' }
             }}
           >
 
