@@ -1,11 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { AppBar, Menu, MenuItem, Toolbar, Typography, Button, IconButton, Box } from "@mui/material";
+import { AppBar, Menu, MenuItem, Toolbar, Typography, Button, IconButton, Box, CssBaseline } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Image from 'next/image';
 import './globals.css';
+import { Open_Sans } from 'next/font/google';
+
+const openSans = Open_Sans({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
 import Footer from "./components/footer";
 
@@ -14,9 +17,10 @@ const theme = createTheme({
     primary: { main: "#FFA500" },
     secondary: { main: "#195905" },
     background: { default: "#f5f5f5", paper: "#f5f5f5" },
+    text: { primary: "#000000" }
   },
   typography: {
-    fontFamily: "ITC Galliard Roman, Georgia, serif",
+    fontFamily: '"Open Sans", Arial, Helvetica, sans-serif',
   },
 });
 
@@ -34,8 +38,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en" style={{ backgroundColor: "#f5f5f5" }}>
-      <body style={{ backgroundColor: "#f5f5f5" }}>
+      <body className={openSans.className} style={{ backgroundColor: "#f5f5f5" }}>
         <ThemeProvider theme={theme}>
+          <CssBaseline />
           <AppBar position="static">
             <Toolbar>
               <Typography component={Link} href="/" variant="h6" sx={{ flexGrow: 1 }}>

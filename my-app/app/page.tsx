@@ -17,6 +17,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Script from 'next/script';
 import { Public } from '@mui/icons-material';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 
@@ -156,23 +157,26 @@ const NonProfitWebsite: React.FC = () => {
             width: "100%",
             height: "100%",
             display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            alignItems: "flex-start",
+            justifyContent: "flex-start",
             backgroundColor: "rgba(0, 0, 0, 0.5)", // Optional overlay for better text contrast
             zIndex: 2, // Ensure text is above the carousel
-            textAlign: "center",
+            textAlign: "left",
+            p: { xs: 2, sm: 3, md: 4 },
           }}
         >
           <Typography
-            variant="h2"
+            variant="h4"
             component="h1"
             color="grey.100"
             sx={{
               fontWeight: "bold",
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", // Add a shadow for better visibility
+              fontSize: { xs: '1.1rem', sm: '1.5rem', md: '2rem' },
+              maxWidth: { xs: '90%', sm: '70%', md: '60%' },
             }}
           >
-            Futures of Kashmir
+            Dedicated to advancing educational equity in Azad Kashmir, Pakistan
           </Typography>
         </Box>
         <style jsx global>{`
@@ -217,14 +221,24 @@ const NonProfitWebsite: React.FC = () => {
                 style={{ width: '100%', height: 'auto', borderRadius: 8 }}
               />
             </Grid>
-            <Grid item xs={12} md={6} color="secondary">
-              <Typography variant="h3" color="secondary" component="h2" gutterBottom>
+            <Grid item xs={12} md={6} color="text.primary">
+              <Typography variant="h3" color="text.primary" component="h2" gutterBottom>
                 Our Mission
               </Typography>
-              <Typography variant="body1" color="secondary" paragraph>
-                Futures of Kashmir works to build a generation of <b>empowered learners</b> in Azad Kashmir by partnering with communities to create <b>equitable educational spaces</b> that inspire creativity and celebrate identity and potential.</Typography>
-              <Typography variant="body1" color="secondary" paragraph>
-                The organization works and advocates with stakeholders in Azad Kashmir to provide educational resources to underserved communities, create innovative learning spaces, and emphasize a whole-child approach to education. Our guiding principle is the fundamental idea that <b>all children deserve supportive learning environments</b> and access to an education that recognizes and uplifts their own sense of identity.
+              <Typography variant="body1" color="text.primary" paragraph>
+                Futures of Kashmir works to build a generation of empowered learners in Azad Kashmir by partnering with communities to create equitable educational spaces that inspire creativity and celebrate identity and potential.
+              </Typography>
+              <Typography variant="body1" color="text.primary" paragraph>
+                The organization works and advocates with stakeholders in Azad Kashmir to provide educational resources to underserved communities, create innovative learning spaces, and emphasize a whole-child approach to education. Our guiding principle is the fundamental idea that all children deserve supportive learning environments and access to an education that recognizes and uplifts their own sense of identity.
+              </Typography>
+              <Typography
+                variant="body1"
+                component={Link}
+                href="/projects/ongoing"
+                color="text.primary"
+                sx={{ textDecoration: 'underline', mt: 2, display: 'inline-block' }}
+              >
+                Learn more about our work
               </Typography>
             </Grid>
           </Grid>
@@ -236,104 +250,64 @@ const NonProfitWebsite: React.FC = () => {
       {/* Impact Section */}
       <Box id="impact" sx={{ py: 8, backgroundColor: 'grey.100' }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" color="secondary" component="h2" align="center" gutterBottom>
-            Recognitions
-          </Typography>
-          <Grid container spacing={4} sx={{ mt: 4 }}>
-
-
-            <Grid item xs={12} md={12}>
-              <Box sx={{
-                position: "relative", overflow: "hidden", height: { xs: '50vw', sm: '50vh' }
-              }}>
-                <Swiper
-                  modules={[Navigation, Pagination, Autoplay]}
-                  autoplay={{ delay: 2500 }}
-                  loop
-                  speed={1000} // Increase the transition duration for smoother sliding
-                  style={{ width: "100%", height: "100%" }} // Adjusted height to fit the box
-
-                >
-                  <SwiperSlide>
-                    <Image
-                      src="/images/gipc.png"
-                      alt="Slide 1"
-                      width={400}
-                      height={300} // Set a fixed height
-                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/projforpeace.png"
-                      alt="Slide 2"
-                      width={400}
-                      height={300} // Set a fixed height
-                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/sips.png"
-                      alt="Slide 3"
-                      width={400}
-                      height={300} // Set a fixed height
-                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/news.png"
-                      alt="Slide 3"
-                      width={400}
-                      height={300} // Set a fixed height
-                      style={{ width: "100%", height: "300px", objectFit: "contain" }} // Set a fixed height
-                    />
-                  </SwiperSlide>
-                </Swiper>
-                <Box
-                  sx={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: "rgba(0, 0, 0, 0)", // Optional overlay for better text contrast
-                    zIndex: 2, // Ensure text is above the carousel
-                    textAlign: "center",
-                  }}
-                >
-
+          <Box
+            sx={{
+              mt: 4,
+              backgroundColor: 'grey.200',
+              borderRadius: '8px',
+              p: { xs: 2, md: 3 },
+            }}
+          >
+            <Typography variant="h3" color="text.primary" component="h2" align="center" gutterBottom>
+              Recognitions
+            </Typography>
+            <Grid container spacing={2} alignItems="center" justifyContent="space-between">
+              <Grid item xs={6} md={3}>
+                <Box sx={{ position: 'relative', height: 120, width: '100%' }}>
+                  <Image
+                    src="/images/gipc.png"
+                    alt="GIPC"
+                    fill
+                    sizes="(max-width: 900px) 50vw, 25vw"
+                    style={{ objectFit: 'contain' }}
+                  />
                 </Box>
-                <style jsx global>{`
-          .responsive-image {
-            width: 100% !important;
-            display: block;
-            object-position: center;
-          }
-
-          @media (max-width: 600px) {
-            /* On mobile: square frame, show full image, no cropping */
-            .responsive-image {
-              height: auto !important;
-              object-fit: contain !important;
-            }
-          }
-
-          @media (min-width: 600px) {
-            /* On desktop: fill entire screen height, cover, no misalignment */
-            .responsive-image {
-              height: 100% !important;
-              object-fit: cover !important;
-            }
-          }
-        `}</style>
-              </Box>
+              </Grid>
+              <Grid item xs={6} md={3}>
+                <Box sx={{ position: 'relative', height: 120, width: '100%' }}>
+                  <Image
+                    src="/images/projforpeace.png"
+                    alt="Projects for Peace"
+                    fill
+                    sizes="(max-width: 900px) 50vw, 25vw"
+                    style={{ objectFit: 'contain' }}
+                  />
+                </Box>
+              </Grid>
+              <Grid item xs={6} md={3}>
+                <Box sx={{ position: 'relative', height: 120, width: '100%' }}>
+                  <Image
+                    src="/images/sips.png"
+                    alt="SIPS"
+                    fill
+                    sizes="(max-width: 900px) 50vw, 25vw"
+                    style={{ objectFit: 'contain' }}
+                  />
+                </Box>
+              </Grid>
+              <Grid item xs={6} md={3}>
+                <Box sx={{ position: 'relative', height: 120, width: '100%' }}>
+                  <Image
+                    src="/images/news.png"
+                    alt="News"
+                    fill
+                    sizes="(max-width: 900px) 50vw, 25vw"
+                    style={{ objectFit: 'contain' }}
+                  />
+                </Box>
+              </Grid>
             </Grid>
-          </Grid>
+          </Box>
         </Container>
       </Box>
       <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
