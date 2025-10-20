@@ -48,15 +48,16 @@ const NonProfitWebsite: React.FC = () => {
   return (
     <>
       <Box sx={{
-        position: "relative", overflow: "hidden", height: { xs: '100vh', sm: '100vh' }
+        position: "relative",
+        overflow: "hidden",
+        height: { xs: '100vh', sm: '100vh' }
       }}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           autoplay={{ delay: 2500 }}
           loop
-          speed={1000} // Increase the transition duration for smoother sliding
+          speed={1000}
           style={{ width: "100%", height: "100vh" }}
-
         >
           <SwiperSlide>
             <Image
@@ -157,23 +158,27 @@ const NonProfitWebsite: React.FC = () => {
             width: "100%",
             height: "100%",
             display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "flex-start",
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Optional overlay for better text contrast
-            zIndex: 2, // Ensure text is above the carousel
-            textAlign: "left",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            zIndex: 2,
+            textAlign: "center",
             p: { xs: 2, sm: 3, md: 4 },
           }}
         >
           <Typography
-            variant="h4"
+            variant="h2"
             component="h1"
             color="grey.100"
             sx={{
               fontWeight: "bold",
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", // Add a shadow for better visibility
-              fontSize: { xs: '1.1rem', sm: '1.5rem', md: '2rem' },
-              maxWidth: { xs: '90%', sm: '70%', md: '60%' },
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
+              fontSize: { xs: '2rem', sm: '3rem', md: '4rem' },
+              maxWidth: { xs: '98%', sm: '85%', md: '70%' },
+              lineHeight: 1.1,
+              textAlign: "center",
+              mx: "auto",
+              width: "100%",
             }}
           >
             Dedicated to advancing educational equity in Azad Kashmir, Pakistan

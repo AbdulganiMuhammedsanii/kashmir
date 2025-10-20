@@ -7,13 +7,26 @@ import axios from "axios";
 import Image from 'next/image';
 
 import { Public } from '@mui/icons-material';
+
 const DonatePage: React.FC = () => {
-  const [amount, setAmount] = useState<string>(""); // Use a string to start with an empty input
-  const [email, setEmail] = useState<string>(""); // State for email
-  const [name, setName] = useState<string>(""); // Use a string to start with an empty input
+  const [amount, setAmount] = useState<string>(""); // The donation amount, can be "5", "10" or custom
+  const [email, setEmail] = useState<string>("");
+  const [name, setName] = useState<string>("");
 
+  // Helpers for amount selector UI
+  const [selectedPreset, setSelectedPreset] = useState<null | string>(null);
 
-  const handleDonate = async (donation_type: string) => {
+  const handlePresetAmount = (value: string) => {
+    setAmount(value);
+    setSelectedPreset(value);
+  };
+
+  const handleCustomAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAmount(e.target.value);
+    setSelectedPreset(null);
+  };
+
+  const handleDonate = async () => {
     const donationAmount = parseFloat(amount);
 
     if (!donationAmount || donationAmount <= 0 || !email) {
@@ -26,7 +39,7 @@ const DonatePage: React.FC = () => {
         amount: donationAmount,
         email,
         name,
-        donation_type
+        donation_type: "Custom Donation"
       });
       window.location.href = response.data.url; // Redirect to Stripe
     } catch (error) {
@@ -39,13 +52,13 @@ const DonatePage: React.FC = () => {
     <Divider
       textAlign="center"
       sx={{
-        my: 0, // Add vertical spacing
+        my: 0,
         backgroundColor: "grey.100",
         '&::before, &::after': {
-          borderColor: 'secondary.main', // Set border color
+          borderColor: 'secondary.main',
         },
         '.MuiDivider-wrapper': {
-          backgroundColor: 'transparent', // Remove background color from the wrapper
+          backgroundColor: 'transparent',
         },
       }}
     >
@@ -73,22 +86,20 @@ const DonatePage: React.FC = () => {
                 }}
               >
                 <Image
-                  src="/images/landingpagemission.jpg" // Replace with your image path
+                  src="/images/landingpagemission.jpg"
                   alt="Support Our Cause"
                   width={400}
                   height={400}
                   style={{
-                    width: "100%", // Makes the image take the full width of the container
-                    height: "auto", // Maintains the aspect ratio
-                    maxHeight: "500px", // Limits the height for large screens
+                    width: "100%",
+                    height: "auto",
+                    maxHeight: "500px",
                     borderRadius: 8,
                     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
                   }}
                 />
               </Box>
             </Grid>
-
-
 
             {/* Form Section */}
             <Grid item xs={12} md={5}>
@@ -98,6 +109,7 @@ const DonatePage: React.FC = () => {
               <Typography variant="body1" gutterBottom color="primary">
                 With your help we will be able to carry out our aim to ensure all children have supportive learning environments and access to an education that recognizes and uplifts their own sense of identity.
               </Typography>
+
               <TextField
                 fullWidth
                 label="Your name"
@@ -116,39 +128,79 @@ const DonatePage: React.FC = () => {
                 placeholder="Enter your email"
                 sx={{ my: 2 }}
               />
+
+              {/* Donation Amount Selector */}
+              <Box sx={{ display: "flex", gap: 2, mb: 1 }}>
+                <Button
+                  fullWidth
+                  variant={selectedPreset === "5" ? "contained" : "outlined"}
+                  color="primary"
+                  sx={{
+                    fontWeight: 600,
+                    py: 2,
+                    borderRadius: 2,
+                    borderWidth: 2,
+                    borderColor: selectedPreset === "5" ? "primary.main" : undefined,
+                  }}
+                  onClick={() => handlePresetAmount("5")}
+                >
+                  $5
+                </Button>
+                <Button
+                  fullWidth
+                  variant={selectedPreset === "10" ? "contained" : "outlined"}
+                  color="primary"
+                  sx={{
+                    fontWeight: 600,
+                    py: 2,
+                    borderRadius: 2,
+                    borderWidth: 2,
+                    borderColor: selectedPreset === "10" ? "primary.main" : undefined,
+                  }}
+                  onClick={() => handlePresetAmount("10")}
+                >
+                  $10
+                </Button>
+              </Box>
+
+              {/* "Other" amount field spans full width below */}
               <TextField
                 fullWidth
-                label="Donation Amount (USD)"
+                label="Other amount (USD)"
                 type="number"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                placeholder="Enter amount" // Placeholder for an empty input
+                inputProps={{ min: 1 }}
+                value={selectedPreset ? "" : amount}
+                onChange={handleCustomAmountChange}
+                placeholder="Enter other amount"
                 sx={{ my: 2 }}
               />
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                onClick={() => handleDonate("Ramadan Donation")}
-              >
-                Sadaqah Jariyah
-              </Button>
 
               <Button
                 variant="contained"
                 color="primary"
                 size="large"
-                onClick={() => handleDonate("Custom Donation")}
-                sx={{ ml: 2 }}
+                fullWidth
+                sx={{
+                  backgroundColor: "#FFA500",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  py: 1.5,
+                  fontSize: "1.1rem",
+                  mt: 1,
+                  textTransform: "none",
+                  boxShadow: 2,
+                  "&:hover": {
+                    backgroundColor: "#cc8400",
+                  }
+                }}
+                onClick={handleDonate}
               >
                 Donate
               </Button>
-
             </Grid>
           </Grid>
         </Container>
         <ElegantDivider icon={<Public fontSize="inherit" color="secondary" />} />
-
       </Box>
     </>
   );
